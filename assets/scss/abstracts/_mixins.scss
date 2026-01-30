@@ -1,0 +1,80 @@
+@mixin mq($size) {
+
+    @if $size ==phone-sm {
+        @media only screen and (max-width: 360px) {
+            @content;
+        }
+    }
+
+    @else if $size ==phone-only {
+        @media only screen and (max-width: 480px) {
+            @content;
+        }
+    }
+
+    @else if $size ==tablet-portrait-up {
+        @media only screen and (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $size ==tablet-portrait-down {
+        @media only screen and (min-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $size ==lg-down {
+
+        @media only screen and (max-width: 992px) {
+            @content;
+        }
+
+    }
+
+    @else if $size ==lg-up {
+        @media only screen and (min-width: 992px) {
+            @content;
+        }
+    }
+
+    @else if $size ==tablet-landscape-up {
+        @media only screen and (max-width: 1024px) {
+            @content;
+        }
+
+        ;
+    }
+
+    @else if $size ==desktop-up {
+        @media only screen and (max-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if $size ==big-desktop-up {
+        @media only screen and (min-width: 1401px) {
+            @content;
+        }
+    }
+
+    @else if $size ==big-desktop-down {
+        @media only screen and (max-width: 1400px) {
+            @content;
+        }
+    }
+}
+
+@mixin img() {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@mixin flex($jc: flex-start, $ai: stretch, $g: 0, $fd: "row", ) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+    gap: $g;
+}
