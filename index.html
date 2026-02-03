@@ -5,14 +5,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ascent</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+    <div class="homepage-container">
 
-    <div class="homapage-container">
-        hello world
+        <!-- homepage head start -->
+        <div class="homepage-head">
+
+            <header>
+
+                <div class="logo-div">
+                    <img src="assets/images/logo-layer.png" alt="">
+                </div>
+
+                <!-- nav start -->
+                <nav>
+
+                    <a href="/">Ana Səhifə</a>
+                    <a href="aboutUs.html">Haqqımızda</a>
+                    <a href="services.html">Xidmətlər</a>
+                    <a href="logistics.html">Logistika</a>
+                    <a href="cases.html">Keyslər</a>
+                    <a href="blog.html">Bloq</a>
+                    <a href="contactUs.html">Əlaqə</a>
+
+                </nav>
+                <!-- nav end -->
+
+                <div class="header-actions">
+
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <div class="circle"></div>
+                            AZ
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">En</a></li>
+                            <li><a class="dropdown-item" href="#">Ru</a></li>
+                        </ul>
+                    </div>
+
+                    <a href="#" class="send-request">Müraciət göndər</a>
+
+                </div>
+
+            </header>
+
+            <div class="hero">
+
+                <div class="hero-intro">
+
+                    <span class="hero-title">Biznesinizi böyütmək üçün düzgün qərarlar burada başlayır.</span>
+
+                    <span class="hero-description">
+                        Strateji biznes konsaltinqi, data əsaslı yanaşma və real
+                        nəticələr. Şirkətinizin potensialını birlikdə maksimuma çıxaraq.
+                    </span>
+
+                    <div class="hero-actions">
+
+                        <a href="#" class="send-request">Müraciət göndər</a>
+
+                        <a href="#" class="free-consultation">Free Consultation</a>
+
+                    </div>
+                </div>
+
+                <div class="hero-form">
+
+                    <div class="form-header">
+
+                        <span class="form-title">Send a Request</span>
+
+                        <span class="form-info">
+                            Share a few details about your business and what you’re looking for.
+                        </span>
+
+                    </div>
+
+                    <div class="form-nav">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <button class="nav-link active w-100 rounded-0" id="buyerTab" data-bs-toggle="tab"
+                                    data-bs-target="#sendRequest" type="button">
+                                    Send Request
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link w-100 rounded-0" id="sellerTab" data-bs-toggle="tab"
+                                    data-bs-target="#applyConsulting" type="button">
+                                    Apply for Free Consulting
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content">
+
+                        <div class="tab-pane active send-request-form" id="sendRequest">
+
+                            <div class="tab-wrapper">
+
+                                <div class="form">
+
+                                    <div class="input-with-label form-grid-item">
+                                        <label for="name"><span>*</span>Name</label>
+
+                                        <input name="name" type="text" placeholder="Enter name">
+                                    </div>
+
+                                    <div class="input-with-label form-grid-item">
+                                        <label for="surname"><span>*</span>Last Name</label>
+
+                                        <input name="surname" type="text" placeholder="Enter last name">
+                                    </div>
+
+                                    <div class="input-with-label form-grid-item">
+                                        <label for="phone"><span>*</span>Phone number</label>
+
+                                        <input name="phone" class="numeric" type="text"
+                                            placeholder="Enter phone number">
+                                    </div>
+
+                                    <div class="select-with-label form-grid-item">
+                                        <label for="subject"><span>*</span>Subject</label>
+
+                                        <select name="subject" id="">
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                        </select>
+
+                                    </div>
+
+                                    <div class="input-with-label form-grid-item">
+                                        <label for="companyName"><span>*</span>Company name</label>
+
+                                        <input name="companyName" type="text" placeholder="Enter company name">
+                                    </div>
+
+                                    <div class="textarea-with-label form-grid-item">
+                                        <label for="message"><span>*</span>Message</label>
+
+                                        <textarea name="message" id=""></textarea>
+
+                                    </div>
+
+                                </div>
+
+                                <a href="#" class="send-request">Müraciət göndər</a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="tab-pane send-request-form" id="applyConsulting">
+                            <div class="tab-wrapper">
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- homepage head end -->
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+    <script src="assets/js/numericInput.js"></script>
 </body>
 
 </html>

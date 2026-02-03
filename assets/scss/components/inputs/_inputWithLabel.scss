@@ -1,0 +1,32 @@
+.input-with-label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    label {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+
+        color: var(--neutral-colors-black, #010203);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+
+        span {
+            color: #EB1000;
+        }
+    }
+
+    input {
+        padding: 10px 0px;
+        color: rgba(0, 0, 0, 0.50);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        border-bottom: 1px solid #CFCFCF;
+    }
+
+}

@@ -2,3 +2,19 @@
 @use './base/base';
 @use './abstracts/mixins';
 @use './abstracts/variables';
+
+// layout
+@use './layout/header';
+
+// components
+// (buttons)
+@use './components/buttons/sendRequest';
+// (inputs)
+@use './components/inputs/inputWithLabel';
+@use './components/inputs/textareaWithLabel';
+// (selects)
+@use './components/selects/selectWithLabel';
+
+// pages
+@use './pages/index';
+@use './pages/test';
