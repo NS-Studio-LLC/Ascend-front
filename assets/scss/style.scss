@@ -8,12 +8,18 @@
 
 // components
 // (buttons)
-@use './components/buttons/sendRequest';
+@use './components/buttons/formButton';
+@use './components/buttons/btnWhite';
 // (inputs)
 @use './components/inputs/inputWithLabel';
 @use './components/inputs/textareaWithLabel';
 // (selects)
 @use './components/selects/selectWithLabel';
+// (cards)
+@use './components/cards/imageCard';
+@use './components/cards/section-info';
+@use './components/cards/accordion';
+@use './components/cards/feedbackCard';
 
 // pages
 @use './pages/index';

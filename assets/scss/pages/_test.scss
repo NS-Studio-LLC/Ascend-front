@@ -1,0 +1,21 @@
+.test-container {
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 20px;
+    }
+
+    .card-item{
+        background-color: green;
+    }
+
+    .cards-grid>.card-item {
+        grid-column: span 2; // default: 2-ci sətirdə 3 kart üçün ideal
+    }
+
+    /* ilk 2 kart 1-ci sətirdə 2 ədəd olsun */
+    .cards-grid>.card-item:nth-child(-n + 2) {
+        grid-column: span 3;
+    }
+
+}
