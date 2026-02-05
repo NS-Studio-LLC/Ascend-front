@@ -1,0 +1,169 @@
+.about-us-page-container {
+    padding: 16px;
+
+    .about-us-head {
+        padding: 24px 50px 32px 50px;
+        border-radius: 16px;
+        background: #1B344D;
+
+        .hero {
+            margin-top: 70px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 60%;
+        }
+    }
+
+    .about-us-section {
+        padding: 50px 50px 0px 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .section-body {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+    }
+
+    .our-team-section {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .section-header {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .section-body {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+        }
+    }
+
+    .certifications-section {
+        padding: 0px 50px 100px 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .section-body {
+            display: flex;
+            gap: 24px;
+
+            .certificate-card {
+                border-radius: 300px;
+                background: #F4F5F6;
+                overflow: hidden;
+                height: 300px;
+                display: flex;
+                padding: 77px 39px 0 40px;
+                justify-content: center;
+                align-items: center;
+                flex: 1 0 0;
+
+                .card-img {
+                    width: 230px;
+                    height: 311px;
+                    margin-top: 70px;
+
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .location-section {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding: 0 50px 50px 50px;
+
+        .section-body {
+            .location-image {
+                border-radius: 12px;
+                overflow: hidden;
+                height: 390px;
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .contact-us-section {
+        padding: 0 50px 100px 50px;
+
+        .section-body {
+            border-radius: 12px;
+            background: #16293A;
+            padding: 16px;
+            display: flex;
+            gap: 24px;
+
+            .section-intro {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                justify-content: flex-end;
+                width: 50%;
+
+                .intro-actions {
+                    margin-top: 12px;
+                    display: flex;
+                    align-items: center;
+                    gap: 24px;
+
+                    .whatsapp-button {
+                        padding: 12px;
+                        border-radius: 6px;
+                        background: #29D045;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        img {
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        span {
+                            color: #FFF;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 510;
+                            line-height: 140%;
+                        }
+                    }
+                }
+            }
+
+            .section-image {
+                height: 355px;
+                width: 50%;
+                border-radius: 12px;
+                overflow: hidden;
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+}

@@ -39,6 +39,24 @@ textarea {
   border: none;
 }
 
+.hero-title {
+  color: #FFF;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 1.08px;
+}
+
+.hero-description {
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0.32px;
+}
+
 .section-title {
   color: #000;
   font-size: 32px;
@@ -135,6 +153,98 @@ header .header-actions .btn-group .dropdown-toggle .circle {
   height: 6px;
   border-radius: 50%;
   background-color: green;
+}
+
+footer {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  border-radius: 16px;
+  background: #F4F5F6;
+}
+footer .footer-top {
+  display: flex;
+  gap: 100px;
+  border-bottom: 1px solid #D1D1D1;
+  padding-bottom: 24px;
+}
+footer .footer-top .footer-infos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+  justify-content: space-between;
+  width: 50%;
+}
+footer .footer-top .footer-infos .info-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer .footer-top .footer-infos .info-div .info-label {
+  color: #989898;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+footer .footer-top .footer-infos .info-div .info-content {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+footer .footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer-nav a {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+footer .footer-nav .social-links {
+  display: flex;
+  align-items: center;
+}
+footer .footer-nav .social-links span {
+  margin-left: 16px;
+}
+footer .footer-nav .social-links a {
+  margin-left: 24px;
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid #E2E2E2;
+  background: #EBEBEB;
+}
+footer .footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footer-bottom .bottom-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+footer .footer-bottom .bottom-actions .copyright {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+footer .footer-bottom .bottom-actions a {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
 }
 
 .form-button {
@@ -341,6 +451,7 @@ header .header-actions .btn-group .dropdown-toggle .circle {
   background: #F4F5F6;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   gap: 12px;
 }
 .section-info-title {
@@ -485,6 +596,44 @@ header .header-actions .btn-group .dropdown-toggle .circle {
   line-height: 120%;
 }
 
+.member-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.member-card .member-image {
+  height: 302px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.member-card .member-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.member-card .member-infos {
+  display: flex;
+  flex-direction: column;
+}
+.member-card .member-infos .member-name {
+  color: #2D2D2D;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+.member-card .member-infos .member-position {
+  color: #858585;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.homepage-container {
+  padding: 16px;
+}
 .homepage-container .homepage-head {
   background: url("/assets/images/homepage-hero.png");
   background-size: cover;
@@ -492,6 +641,7 @@ header .header-actions .btn-group .dropdown-toggle .circle {
   background-repeat: no-repeat;
   min-height: 923px;
   padding: 24px 50px 32px 50px;
+  border-radius: 16px;
 }
 .homepage-container .homepage-head .hero {
   padding-top: 70px;
@@ -507,14 +657,6 @@ header .header-actions .btn-group .dropdown-toggle .circle {
 }
 .homepage-container .homepage-head .hero .hero-intro span {
   color: #fff;
-}
-.homepage-container .homepage-head .hero .hero-intro .hero-title {
-  color: #FFF;
-  font-size: 54px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 120%;
-  letter-spacing: 1.08px;
 }
 .homepage-container .homepage-head .hero .hero-intro .hero-description {
   color: #FFF;
@@ -755,6 +897,206 @@ header .header-actions .btn-group .dropdown-toggle .circle {
   flex-direction: column;
   gap: 50px;
   padding: 0 50px 100px 50px;
+}
+.homepage-container .contact-us-section {
+  padding: 0 50px 100px 50px;
+}
+.homepage-container .contact-us-section .section-body {
+  border-radius: 12px;
+  background: #16293A;
+  padding: 16px;
+  display: flex;
+  gap: 24px;
+}
+.homepage-container .contact-us-section .section-body .section-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: flex-end;
+  width: 50%;
+}
+.homepage-container .contact-us-section .section-body .section-intro .intro-actions {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.homepage-container .contact-us-section .section-body .section-intro .intro-actions .whatsapp-button {
+  padding: 12px;
+  border-radius: 6px;
+  background: #29D045;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.homepage-container .contact-us-section .section-body .section-intro .intro-actions .whatsapp-button img {
+  width: 20px;
+  height: 20px;
+}
+.homepage-container .contact-us-section .section-body .section-intro .intro-actions .whatsapp-button span {
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 510;
+  line-height: 140%;
+}
+.homepage-container .contact-us-section .section-body .section-image {
+  height: 355px;
+  width: 50%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.homepage-container .contact-us-section .section-body .section-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.about-us-page-container {
+  padding: 16px;
+}
+.about-us-page-container .about-us-head {
+  padding: 24px 50px 32px 50px;
+  border-radius: 16px;
+  background: #1B344D;
+}
+.about-us-page-container .about-us-head .hero {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 60%;
+}
+.about-us-page-container .about-us-section {
+  padding: 50px 50px 0px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.about-us-page-container .about-us-section .section-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.about-us-page-container .our-team-section {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.about-us-page-container .our-team-section .section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.about-us-page-container .our-team-section .section-body {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+.about-us-page-container .certifications-section {
+  padding: 0px 50px 100px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.about-us-page-container .certifications-section .section-body {
+  display: flex;
+  gap: 24px;
+}
+.about-us-page-container .certifications-section .section-body .certificate-card {
+  border-radius: 300px;
+  background: #F4F5F6;
+  overflow: hidden;
+  height: 300px;
+  display: flex;
+  padding: 77px 39px 0 40px;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+}
+.about-us-page-container .certifications-section .section-body .certificate-card .card-img {
+  width: 230px;
+  height: 311px;
+  margin-top: 70px;
+}
+.about-us-page-container .certifications-section .section-body .certificate-card .card-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.about-us-page-container .location-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 0 50px 50px 50px;
+}
+.about-us-page-container .location-section .section-body .location-image {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 390px;
+}
+.about-us-page-container .location-section .section-body .location-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.about-us-page-container .contact-us-section {
+  padding: 0 50px 100px 50px;
+}
+.about-us-page-container .contact-us-section .section-body {
+  border-radius: 12px;
+  background: #16293A;
+  padding: 16px;
+  display: flex;
+  gap: 24px;
+}
+.about-us-page-container .contact-us-section .section-body .section-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: flex-end;
+  width: 50%;
+}
+.about-us-page-container .contact-us-section .section-body .section-intro .intro-actions {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.about-us-page-container .contact-us-section .section-body .section-intro .intro-actions .whatsapp-button {
+  padding: 12px;
+  border-radius: 6px;
+  background: #29D045;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.about-us-page-container .contact-us-section .section-body .section-intro .intro-actions .whatsapp-button img {
+  width: 20px;
+  height: 20px;
+}
+.about-us-page-container .contact-us-section .section-body .section-intro .intro-actions .whatsapp-button span {
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 510;
+  line-height: 140%;
+}
+.about-us-page-container .contact-us-section .section-body .section-image {
+  height: 355px;
+  width: 50%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.about-us-page-container .contact-us-section .section-body .section-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .test-container {

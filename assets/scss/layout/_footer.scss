@@ -1,0 +1,105 @@
+footer {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    border-radius: 16px;
+    background: #F4F5F6;
+
+    .footer-top {
+        display: flex;
+        gap: 100px;
+        border-bottom: 1px solid #D1D1D1;
+        padding-bottom: 24px;
+
+        .footer-infos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 80px;
+            justify-content: space-between;
+            width: 50%;
+
+            .info-div {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .info-label {
+                    color: #989898;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%;
+                    text-transform: uppercase;
+                }
+
+                .info-content {
+                    color: #000;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%;
+                }
+            }
+        }
+    }
+
+    .footer-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+            color: #000;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+        }
+
+        .social-links {
+            display: flex;
+            align-items: center;
+
+            span {
+                margin-left: 16px;
+            }
+
+            a {
+                margin-left: 24px;
+                padding: 6px;
+                border-radius: 8px;
+                border: 1px solid #E2E2E2;
+                background: #EBEBEB;
+            }
+        }
+    }
+
+    .footer-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .bottom-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            .copyright {
+                color: #000;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+            }
+
+            a {
+                color: #000;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+            }
+        }
+    }
+}
