@@ -444,6 +444,10 @@ footer .footer-bottom .bottom-actions a {
   font-weight: 500;
   line-height: 140%;
 }
+.image-card .form-button {
+  width: -moz-fit-content;
+  width: fit-content;
+}
 
 .section-info {
   padding: 24px;
@@ -631,6 +635,61 @@ footer .footer-bottom .bottom-actions a {
   line-height: 140%;
 }
 
+.contact-card {
+  padding: 0 50px 100px 50px;
+}
+.contact-card .section-body {
+  border-radius: 12px;
+  background: #16293A;
+  padding: 16px;
+  display: flex;
+  gap: 24px;
+}
+.contact-card .section-body .section-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: flex-end;
+  width: 50%;
+}
+.contact-card .section-body .section-intro .intro-actions {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.contact-card .section-body .section-intro .intro-actions .whatsapp-button {
+  padding: 12px;
+  border-radius: 6px;
+  background: #29D045;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contact-card .section-body .section-intro .intro-actions .whatsapp-button img {
+  width: 20px;
+  height: 20px;
+}
+.contact-card .section-body .section-intro .intro-actions .whatsapp-button span {
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 510;
+  line-height: 140%;
+}
+.contact-card .section-body .section-image {
+  height: 355px;
+  width: 50%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.contact-card .section-body .section-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 .homepage-container {
   padding: 16px;
 }
@@ -776,18 +835,18 @@ footer .footer-bottom .bottom-actions a {
   align-items: center;
   gap: 42px;
 }
-.homepage-container .services-section {
+.homepage-container .homepage-services-section {
   padding: 0px 50px;
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
-.homepage-container .services-section .section-header {
+.homepage-container .homepage-services-section .section-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.homepage-container .services-section .section-body .section-intro {
+.homepage-container .homepage-services-section .section-body .section-intro {
   padding: 16px !important;
   border-radius: 12px;
   background: #1B344D;
@@ -796,31 +855,31 @@ footer .footer-bottom .bottom-actions a {
   gap: 12px;
   justify-content: flex-end;
 }
-.homepage-container .services-section .section-body .section-intro .section-description-white {
+.homepage-container .homepage-services-section .section-body .section-intro .section-description-white {
   font-weight: 300;
 }
-.homepage-container .services-section .section-body .section-intro .btn-white {
+.homepage-container .homepage-services-section .section-body .section-intro .btn-white {
   margin-top: 12px;
   width: -moz-fit-content;
   width: fit-content;
 }
-.homepage-container .services-section .grid-container {
+.homepage-container .homepage-services-section .grid-container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 16px;
 }
-.homepage-container .services-section .grid-container > .grid-item {
+.homepage-container .homepage-services-section .grid-container > .grid-item {
   grid-column: span 2;
   padding: 0;
 }
-.homepage-container .services-section .grid-container > .grid-item:nth-child(-n+2) {
+.homepage-container .homepage-services-section .grid-container > .grid-item:nth-child(-n+2) {
   grid-column: span 3;
 }
 @media (max-width: 768px) {
-  .homepage-container .services-section .grid-container {
+  .homepage-container .homepage-services-section .grid-container {
     grid-template-columns: 1fr;
   }
-  .homepage-container .services-section .grid-container > .grid-item {
+  .homepage-container .homepage-services-section .grid-container > .grid-item {
     grid-column: auto;
   }
 }
@@ -1044,59 +1103,27 @@ footer .footer-bottom .bottom-actions a {
   width: 100%;
   height: 100%;
 }
-.about-us-page-container .contact-us-section {
-  padding: 0 50px 100px 50px;
-}
-.about-us-page-container .contact-us-section .section-body {
-  border-radius: 12px;
-  background: #16293A;
+
+.services-page-container {
   padding: 16px;
-  display: flex;
-  gap: 24px;
 }
-.about-us-page-container .contact-us-section .section-body .section-intro {
+.services-page-container .services-head {
+  padding: 24px 50px 32px 50px;
+  border-radius: 16px;
+  background: #1B344D;
+}
+.services-page-container .services-head .hero {
+  margin-top: 70px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  justify-content: flex-end;
-  width: 50%;
+  gap: 16px;
+  width: 60%;
 }
-.about-us-page-container .contact-us-section .section-body .section-intro .intro-actions {
-  margin-top: 12px;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-.about-us-page-container .contact-us-section .section-body .section-intro .intro-actions .whatsapp-button {
-  padding: 12px;
-  border-radius: 6px;
-  background: #29D045;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.about-us-page-container .contact-us-section .section-body .section-intro .intro-actions .whatsapp-button img {
-  width: 20px;
-  height: 20px;
-}
-.about-us-page-container .contact-us-section .section-body .section-intro .intro-actions .whatsapp-button span {
-  color: #FFF;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 510;
-  line-height: 140%;
-}
-.about-us-page-container .contact-us-section .section-body .section-image {
-  height: 355px;
-  width: 50%;
-  border-radius: 12px;
-  overflow: hidden;
-}
-.about-us-page-container .contact-us-section .section-body .section-image img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
+.services-page-container .services-section {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
 .test-container {

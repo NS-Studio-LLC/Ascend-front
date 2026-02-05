@@ -22,9 +22,10 @@
 @use './components/cards/accordion';
 @use './components/cards/feedbackCard';
 @use './components/cards/memberCard';
+@use './components/cards/contactCard.scss';
 // pages
 @use './pages/index';
 @use './pages/aboutUs';
-
+@use './pages/services';
 
 @use './pages/test';
