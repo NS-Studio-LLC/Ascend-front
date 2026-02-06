@@ -1,0 +1,84 @@
+.blog-details-page-container {
+    padding: 16px;
+
+    .blog-details-head {
+        padding: 24px 50px 32px 50px;
+        border-radius: 16px;
+        background: #1B344D;
+        background: url('/assets/images/blog-details-hero.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        .hero {
+            margin-top: 70px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 60%;
+        }
+
+    }
+
+    .blog-details {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding: 32px 50px 50px 50px;
+
+        .share-article {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            span {
+                color: #333;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 140%;
+                letter-spacing: 0.28px;
+            }
+
+            .share-links {
+                display: flex;
+                align-items: center;
+                gap: 24px;
+
+                .link {
+                    padding: 12px;
+                    border-radius: 8px;
+                    border: 1px solid #E2E2E2;
+                    background: #EBEBEB;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+
+
+    }
+
+    .recommended-blogs {
+        padding: 0 50px 50px 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-body{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+    }
+
+}

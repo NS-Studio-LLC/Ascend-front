@@ -1,0 +1,60 @@
+.cases-page-container {
+    padding: 16px;
+
+    .cases-head {
+        padding: 24px 50px 32px 50px;
+        border-radius: 16px;
+        background: #1B344D;
+
+        .hero {
+            margin-top: 70px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 60%;
+        }
+    }
+
+    .our-cases {
+        padding: 50px 50px 0px 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .section-body {
+            display: flex;
+            flex-direction: column;
+
+            .case-part {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+
+                .customer-review-section {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .section-body {
+                        display: flex;
+
+                        .customer-review {
+                            width: 100%;
+                        }
+                    }
+                }
+
+            }
+
+            .case-two {
+                padding-top: 100px;
+            }
+
+            .case-three {
+                padding-top: 100px;
+                padding-bottom: 100px;
+            }
+
+        }
+    }
+}

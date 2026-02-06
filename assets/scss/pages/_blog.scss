@@ -1,7 +1,7 @@
-.services-page-container {
+.blog-page-container {
     padding: 16px;
 
-    .services-head {
+    .blog-head {
         padding: 24px 50px 32px 50px;
         border-radius: 16px;
         background: #1B344D;
@@ -15,12 +15,11 @@
         }
     }
 
-    .services-section {
+    .blogs-container{
         padding: 50px;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 16px;
+        row-gap: 32px;
     }
-
 }
