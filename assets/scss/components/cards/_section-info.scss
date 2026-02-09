@@ -31,3 +31,52 @@
     }
 
 }
+
+.section-info-with-icon {
+    padding: 16px;
+    border-radius: 12px;
+    background: #F4F5F6;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .icon {
+        padding: 12px;
+        border-radius: 12px;
+        border: 1px solid #ECECEC;
+        background: var(--surface-background-surface, #F9F9F9);
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .section-info-title {
+            color: #000;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 140%;
+        }
+
+        .section-info-description {
+            color: #000;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+        }
+
+    }
+
+    .text-box {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px;
+        border-radius: 12px;
+        background: #FFF;
+    }
+
+}

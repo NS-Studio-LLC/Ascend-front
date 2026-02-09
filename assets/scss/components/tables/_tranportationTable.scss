@@ -1,0 +1,73 @@
+.transportation-options-table {
+    width: 100%;
+
+    thead {
+        background-color: green;
+
+        tr {
+
+            th {
+                padding: 16px;
+                color: rgba(1, 2, 3, 0.70);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                border-bottom: 1px solid #D1D1D1;
+                background: #F4F5F6;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            &:nth-child(even) {
+                border-bottom: 1px solid #D1D1D1;
+                background: #F4F5F6;
+            }
+
+            &:nth-child(odd) {
+                border-bottom: 1px solid #D1D1D1;
+                background: var(--surface-background-background, #FFF);
+            }
+
+            td {
+                padding: 12px 16px;
+                overflow: hidden;
+                color: #000;
+                text-overflow: ellipsis;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+
+                .transportation-type {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+
+                    .icon {
+                        padding: 12px;
+                        border-radius: 12px;
+                        border: 1px solid #ECECEC;
+                        background: var(--surface-background-surface, #F9F9F9);
+                    }
+
+                    span {
+                        overflow: hidden;
+                        color: #000;
+                        text-overflow: ellipsis;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                    }
+                }
+
+
+
+
+            }
+        }
+    }
+}

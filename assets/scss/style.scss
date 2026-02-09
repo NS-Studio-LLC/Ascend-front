@@ -23,6 +23,8 @@
 @use './components/cards/memberCard';
 @use './components/cards/contactCard.scss';
 @use './components/cards/customerReview';
+// (tables)
+@use './components/tables/tranportationTable';
 // pages
 @use './pages/index';
 @use './pages/aboutUs';
@@ -30,5 +32,7 @@
 @use './pages/cases';
 @use './pages/blog';
 @use './pages/blogDetails';
+@use './pages/contactUs';
+@use './pages/logistics';
 
 @use './pages/test';

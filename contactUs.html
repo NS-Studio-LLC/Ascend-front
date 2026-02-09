@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascent</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="contact-us-page-container">
+
+        <!-- contact us head start -->
+        <div class="contact-us-head">
+
+            <header>
+
+                <a href="/" class="logo-div">
+                    <img src="assets/images/logo-layer.png" alt="">
+                </a>
+
+                <!-- nav start -->
+                <nav>
+
+                    <a href="/">Ana Səhifə</a>
+                    <a href="aboutUs.html">Haqqımızda</a>
+                    <a href="services.html">Xidmətlər</a>
+                    <a href="logistics.html">Logistika</a>
+                    <a href="cases.html">Keyslər</a>
+                    <a href="blog.html">Bloq</a>
+                    <a href="contactUs.html">Əlaqə</a>
+
+                </nav>
+                <!-- nav end -->
+
+                <div class="header-actions">
+
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <div class="circle"></div>
+                            AZ
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">En</a></li>
+                            <li><a class="dropdown-item" href="#">Ru</a></li>
+                        </ul>
+                    </div>
+
+                    <a href="#" class="form-button">Müraciət göndər</a>
+
+                </div>
+
+            </header>
+
+            <div class="hero">
+
+                <div class="hero-intro">
+
+                    <span class="hero-title">Let’s Connect and Grow Together</span>
+
+                    <span class="hero-description">
+                        Have questions, a project to discuss, or need expert guidance? Our team is ready to help. Reach
+                        out and we’ll get back to you quickly to explore how we can support your business goals.
+                    </span>
+
+                </div>
+
+                <div class="hero-form">
+
+                    <div class="form-header">
+
+                        <span class="form-title">Send a Request</span>
+
+                        <span class="form-description">
+                            Share a few details about your business and what you’re looking for.
+                        </span>
+
+                    </div>
+
+                    <div class="form-nav">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <button class="nav-link active w-100 rounded-0" id="buyerTab" data-bs-toggle="tab"
+                                    data-bs-target="#sendRequest" type="button">
+                                    Send Request
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link w-100 rounded-0" id="sellerTab" data-bs-toggle="tab"
+                                    data-bs-target="#applyConsulting" type="button">
+                                    Apply for Free Consulting
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content">
+
+                        <div class="tab-pane active send-request-form" id="sendRequest">
+
+                            <div class="tab-wrapper">
+
+                                <form class="form">
+
+                                    <div class="input-with-label form-grid-item">
+                                        <label for="name"><span>*</span>Name</label>
+
+                                        <input name="name" type="text" placeholder="Enter name">
+                                    </div>
+
+                                    <div class="input-with-label form-grid-item">
+                                        <label for="surname"><span>*</span>Last Name</label>
+
+                                        <input name="surname" type="text" placeholder="Enter last name">
+                                    </div>
+
+                                    <div class="input-with-label form-grid-item">
+                                        <label for="phone"><span>*</span>Phone number</label>
+
+                                        <input name="phone" class="numeric" type="text"
+                                            placeholder="Enter phone number">
+                                    </div>
+
+                                    <div class="select-with-label form-grid-item">
+                                        <label for="subject"><span>*</span>Subject</label>
+
+                                        <select name="subject" id="">
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                        </select>
+
+                                    </div>
+
+                                    <div class="input-with-label form-grid-item">
+                                        <label for="companyName"><span>*</span>Company name</label>
+
+                                        <input name="companyName" type="text" placeholder="Enter company name">
+                                    </div>
+
+                                    <div class="textarea-with-label form-grid-item">
+                                        <label for="message"><span>*</span>Message</label>
+
+                                        <textarea name="message" id=""></textarea>
+
+                                    </div>
+
+                                </form>
+
+                                <a href="#" class="form-button">Müraciət göndər</a>
+
+                                <span class="form-info">
+                                    We respect your privacy. Your information will only be used to
+                                    contact you regarding your request.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="tab-pane send-request-form" id="applyConsulting">
+                            <div class="tab-wrapper">
+
+                                <form class="form">
+
+                                    <div class="input-with-label form-grid-item">
+                                        <label for="name"><span>*</span>Name</label>
+
+                                        <input name="name" type="text" placeholder="Enter name">
+                                    </div>
+
+                                    <div class="input-with-label form-grid-item">
+                                        <label for="surname"><span>*</span>Last Name</label>
+
+                                        <input name="surname" type="text" placeholder="Enter last name">
+                                    </div>
+
+                                    <div class="input-with-label form-grid-item">
+                                        <label for="phone"><span>*</span>Phone number</label>
+
+                                        <input name="phone" class="numeric" type="text"
+                                            placeholder="Enter phone number">
+                                    </div>
+
+                                    <div class="select-with-label form-grid-item">
+                                        <label for="subject"><span>*</span>Subject</label>
+
+                                        <select name="subject" id="">
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                        </select>
+
+                                    </div>
+
+                                    <div class="input-with-label form-grid-item">
+                                        <label for="companyName"><span>*</span>Company name</label>
+
+                                        <input name="companyName" type="text" placeholder="Enter company name">
+                                    </div>
+
+                                    <div class="textarea-with-label form-grid-item">
+                                        <label for="message"><span>*</span>Message</label>
+
+                                        <textarea name="message" id=""></textarea>
+
+                                    </div>
+
+                                </form>
+
+                                <a href="#" class="form-button">Müraciət göndər</a>
+
+                                <span class="form-info">
+                                    We respect your privacy. Your information will only be used to
+                                    contact you regarding your request.
+                                </span>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- contact us head end -->
+
+        <div class="contact-us">
+
+            <div class="section-header">
+                <span class="section-title">Find us easily using the map below</span>
+            </div>
+
+            <div class="contact-us-section">
+                <div class="section-body">
+                    <div class="section-intro">
+                        <span class="section-title-white">Ready to Move Your Business Forward?</span>
+                        <p class="section-description-white">Whether you’re refining your strategy or planning your next
+                            big
+                            move, our team is here to help. Let’s turn your goals into clear actions and measurable
+                            results.
+                        </p>
+
+                        <div class="intro-actions">
+                            <a href="#" class="btn-white">Send a request</a>
+                            <a href="#" class="whatsapp-button">
+                                <img src="assets/icons/wp-icon.png" alt="">
+                                <span>Write us on Whatsapp</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="section-image">
+                        <img src="assets/images/contact-us-section-img.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- footer start -->
+        <footer>
+
+            <div class="footer-top">
+                <div class="footer-title">
+                    <span class="section-title">Biznesinizi böyütmək üçün düzgün qərarlar burada başlayır.</span>
+                </div>
+                <div class="footer-infos">
+                    <div class="info-div">
+                        <span class="info-label">Location</span>
+                        <span class="info-content">457 Westbridge Ave, Manchester 234567</span>
+                    </div>
+                    <div class="info-div">
+                        <span class="info-label">Email</span>
+                        <span class="info-content">business.consulting@gamil.com</span>
+                    </div>
+                    <div class="info-div">
+                        <span class="info-label">Call us</span>
+                        <span class="info-content">+1200-555-0834</span>
+                    </div>
+                    <div class="info-div">
+                        <span class="info-label">open time</span>
+                        <span class="info-content">09:00am - 06:00pm</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-nav">
+
+                <a href="/">Home</a>
+                <a href="aboutUs.html">About us</a>
+                <a href="services.html">Services</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="contactUs.html">Contact us</a>
+
+                <div class="social-links">
+                    <span>Social</span>
+                    <a href="#">
+                        <img src="assets/icons/wp-icon-black.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="assets/icons/insta-icon.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="assets/icons/telegram-icon.svg" alt="">
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <span class="copyright">© 2026 Ascend Business Consulting</span>
+
+                <div class="bottom-actions">
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+
+        </footer>
+        <!-- footer end -->
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+    <script src="assets/js/numericInput.js"></script>
+</body>
+
+</html>
