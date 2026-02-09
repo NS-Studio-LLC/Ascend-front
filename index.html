@@ -159,7 +159,10 @@
 
                                 </form>
 
-                                <a href="#" class="form-button">Müraciət göndər</a>
+                                <button type="button" class="form-button" data-bs-toggle="modal"
+                                    data-bs-target="#sendRequestModal">
+                                    Müraciət göndər
+                                </button>
 
                                 <span class="form-info">
                                     We respect your privacy. Your information will only be used to
@@ -220,7 +223,10 @@
 
                                 </form>
 
-                                <a href="#" class="form-button">Müraciət göndər</a>
+                                <button type="button" class="form-button" data-bs-toggle="modal"
+                                    data-bs-target="#sendRequestModal">
+                                    Müraciət göndər
+                                </button>
 
                                 <span class="form-info">
                                     We respect your privacy. Your information will only be used to
@@ -745,6 +751,56 @@
         <!-- footer end -->
 
     </div>
+
+    <!-- Send Request Modal start -->
+    <div class="modal send-request-modal fade" id="sendRequestModal" tabindex="-1"
+        aria-labelledby="sendRequestModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-image">
+                    <img src="assets/images/modal-img.jpg" alt="">
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="modal-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M11.5 23C5.7005 23 1 18.2995 1 12.5C1 6.7005 5.7005 2 11.5 2C17.2995 2 22 6.7005 22 12.5C22 18.2995 17.2995 23 11.5 23Z"
+                                fill="#29D045" />
+                            <path d="M16.1663 10.1667L10.333 16.0001L6.83301 12.5001" stroke="white" stroke-width="1.75"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Request sent successfully.</span>
+                    </div>
+
+                    <p class="modal-description">
+                        Thanks for reaching out — we’ll be in touch soon. If your request is urgent, contact us on
+                        WhatsApp.
+                    </p>
+
+                </div>
+
+                <button class="button write-us">
+
+                    <img src="assets/icons/wp-icon.png" alt="">
+
+                    <span>
+                        Write us on Whatsapp
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Send Request Modal emd -->
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">

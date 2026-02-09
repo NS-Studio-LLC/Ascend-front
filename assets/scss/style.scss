@@ -25,6 +25,8 @@
 @use './components/cards/customerReview';
 // (tables)
 @use './components/tables/tranportationTable';
+// (modals)
+@use './components/modals/requestModal';
 // pages
 @use './pages/index';
 @use './pages/aboutUs';
