@@ -1,0 +1,39 @@
+#view {
+  position: relative;
+  isolation: isolate;
+}
+
+#view .layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#view .layer.old {
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+#view .layer.old.is-leaving {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#view .layer.new {
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+#view .layer.new.is-entering {
+  opacity: 1;
+}
+
+#view .homepage-head {
+  overflow: hidden; 
+  will-change: height;
+}
+
+#view .homepage-head.is-shrinking {
+  transition: height 800ms ease;
+}

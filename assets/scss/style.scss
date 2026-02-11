@@ -27,6 +27,8 @@
 @use './components/tables/tranportationTable';
 // (modals)
 @use './components/modals/requestModal';
+// (animations)
+@use './animations/pageTransitions.scss';
 // pages
 @use './pages/index';
 @use './pages/aboutUs';
