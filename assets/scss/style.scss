@@ -11,6 +11,7 @@
 // (buttons)
 @use './components/buttons/formButton';
 @use './components/buttons/btnWhite';
+@use './components/buttons/hoverButton';
 // (inputs)
 @use './components/inputs/inputWithLabel';
 @use './components/inputs/textareaWithLabel';
@@ -23,6 +24,8 @@
 @use './components/cards/memberCard';
 @use './components/cards/contactCard.scss';
 @use './components/cards/customerReview';
+@use './components/cards/logoStrip';
+@use './components/cards/offcanvas';
 // (tables)
 @use './components/tables/tranportationTable';
 // (modals)

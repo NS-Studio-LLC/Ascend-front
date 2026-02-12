@@ -1,0 +1,67 @@
+@use '../../abstracts/mixins' as *;
+
+.logo-strip {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+
+    .track {
+        --s: 200px;
+        --d: 8s;
+        --n: 10;
+        
+        @include mq(tablet-portrait-up){
+
+        }
+
+
+        display: flex;
+        gap: 18px;
+        overflow: hidden;
+        margin: 0;
+
+        .logo-div {
+            offset: shape(from calc(var(--s) / -2) 50%,
+                    hline by calc(sibling-count() * max(100% / var(--n), var(--s) + 10px)));
+            animation: x var(--d) linear infinite calc(-1 * sibling-index() * var(--d) / sibling-count());
+            animation-play-state: running;
+
+            img {
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+            }
+
+
+        }
+
+
+        &:hover .logo-div {
+            animation-play-state: paused;
+        }
+
+        &:nth-child(2) img {
+            animation-name: x-reverse;
+        }
+    }
+}
+
+@keyframes x {
+    0% {
+        offset-distance: 0%;
+    }
+
+    100% {
+        offset-distance: 100%;
+    }
+}
+
+@keyframes x-reverse {
+    0% {
+        offset-distance: 100%;
+    }
+
+    100% {
+        offset-distance: 0%;
+    }
+}

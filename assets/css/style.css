@@ -126,6 +126,11 @@ header nav {
   gap: 12px;
   padding: 0 12px;
 }
+@media only screen and (max-width: 768px) {
+  header nav {
+    display: none;
+  }
+}
 header nav a {
   --dot: 6px;
   --gap: 6px;
@@ -169,6 +174,11 @@ header .header-actions {
   align-items: center;
   gap: 16px;
 }
+@media only screen and (max-width: 768px) {
+  header .header-actions {
+    display: none;
+  }
+}
 header .header-actions .btn-group .dropdown-toggle {
   padding: 12px;
   display: flex;
@@ -191,6 +201,11 @@ header .header-actions .btn-group .dropdown-toggle .circle {
   height: 6px;
   border-radius: 50%;
   background-color: green;
+}
+@media only screen and (min-width: 768px) {
+  header .menu-button {
+    display: none;
+  }
 }
 
 footer {
@@ -305,6 +320,64 @@ footer .footer-bottom .bottom-actions a {
   text-align: center;
 }
 
+.hover-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 12px;
+  border-radius: 6px;
+  background: #7A1F20;
+  color: #fff;
+  text-decoration: none;
+}
+.hover-button img {
+  width: 0;
+  height: 16px;
+  opacity: 0;
+  margin-right: 0;
+  transform: translateX(-14px);
+  transition: width 0.25s ease, margin-right 0.25s ease, opacity 0.2s ease, transform 0.25s ease;
+}
+.hover-button:hover img {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hover-button-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 12px;
+  border-radius: 6px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+}
+.hover-button-white img {
+  width: 0;
+  height: 16px;
+  opacity: 0;
+  margin-right: 0;
+  transform: translateX(-14px);
+  transition: width 0.25s ease, margin-right 0.25s ease, opacity 0.2s ease, transform 0.25s ease;
+}
+.hover-button-white:hover img {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .input-with-label {
   display: flex;
   flex-direction: column;
@@ -399,6 +472,10 @@ footer .footer-bottom .bottom-actions a {
   justify-content: flex-end;
   position: relative;
   min-height: 387px;
+  cursor: pointer;
+}
+.image-card:hover img {
+  transform: scale(1.2);
 }
 .image-card img {
   -o-object-fit: cover;
@@ -407,6 +484,7 @@ footer .footer-bottom .bottom-actions a {
   height: 100%;
   border-radius: 12px;
   position: absolute;
+  transition: all 0.4s ease-in;
 }
 .image-card .text-box {
   border-radius: 12px;
@@ -742,6 +820,40 @@ footer .footer-bottom .bottom-actions a {
   height: 100%;
 }
 
+/* Swiper container */
+.customerSwiper {
+  width: 100%;
+}
+
+/* Fade effektdə slide-lar üst-üstə düşür, ona görə */
+.customerSwiper .swiper-slide {
+  height: auto;
+}
+
+/* ✅ Sola sürüşmə hissi üçün */
+.customerSwiper .swiper-slide .customer-review {
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Active olan normal */
+.customerSwiper .swiper-slide-active .customer-review {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Əvvəlki (fade-out olan) azca sola getsin */
+.customerSwiper .swiper-slide-prev .customer-review {
+  transform: translateX(-40px);
+  opacity: 0;
+}
+
+/* Növbəti (fade-in olan) sağdan gəlsin */
+.customerSwiper .swiper-slide-next .customer-review {
+  transform: translateX(40px);
+  opacity: 0;
+}
+
+/* Sənin mövcud customer-review stillərin olduğu kimi qalır */
 .customer-review {
   display: flex;
   flex-direction: column;
@@ -779,16 +891,118 @@ footer .footer-bottom .bottom-actions a {
 .customer-review .review-body .customer-name {
   color: #000;
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
   line-height: 120%;
 }
 .customer-review .review-body .customer-position {
   color: rgba(0, 0, 0, 0.5);
   font-size: 14px;
-  font-style: normal;
   font-weight: 500;
   line-height: 120%;
+}
+
+/* Optional: next button icon rotate */
+.btn-next img {
+  transform: rotate(180deg);
+}
+
+.logo-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+.logo-strip .track {
+  --s: 200px;
+  --d: 8s;
+  --n: 10;
+  display: flex;
+  gap: 18px;
+  overflow: hidden;
+  margin: 0;
+}
+.logo-strip .track .logo-div {
+  offset: shape(from calc(var(--s) / -2) 50%, hline by calc(sibling-count() * max(100% / var(--n), var(--s) + 10px)));
+  animation: x var(--d) linear infinite calc(-1 * sibling-index() * var(--d) / sibling-count());
+  animation-play-state: running;
+}
+.logo-strip .track .logo-div img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.logo-strip .track:hover .logo-div {
+  animation-play-state: paused;
+}
+.logo-strip .track:nth-child(2) img {
+  animation-name: x-reverse;
+}
+
+@keyframes x {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+@keyframes x-reverse {
+  0% {
+    offset-distance: 100%;
+  }
+  100% {
+    offset-distance: 0%;
+  }
+}
+.offcanvas-header {
+  padding: 12px;
+}
+.offcanvas-header .logo-div img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.offcanvas-body {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.offcanvas-body .offcanvas-navs .nav-link {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease-in;
+}
+.offcanvas-body .offcanvas-navs .nav-link:hover {
+  transform: scale(1.01);
+}
+.offcanvas-body .offcanvas-navs .nav-link span {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.offcanvas-body .offcanvas-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+}
+.offcanvas-body .offcanvas-actions .hover-button-white {
+  display: inline-block;
+}
+.offcanvas-body .offcanvas-actions .view-projects {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 12px;
+  text-decoration: none;
 }
 
 .transportation-options-table {
@@ -952,13 +1166,13 @@ footer .footer-bottom .bottom-actions a {
   opacity: 1;
 }
 
-#view .homepage-head {
+#view .animated-head {
   overflow: hidden;
   will-change: height;
 }
 
-#view .homepage-head.is-shrinking {
-  transition: height 800ms ease;
+#view .animated-head.is-shrinking {
+  transition: height 1000ms ease;
 }
 
 .homepage-container {
@@ -972,7 +1186,12 @@ footer .footer-bottom .bottom-actions a {
   height: 923px;
   padding: 24px 50px 32px 50px;
   border-radius: 16px;
-  overflow: hidden;
+}
+@media only screen and (max-width: 768px) {
+  .homepage-container .homepage-head {
+    padding: 24px 16px;
+    height: auto;
+  }
 }
 .homepage-container .homepage-head .hero {
   padding-top: 70px;
@@ -980,14 +1199,17 @@ footer .footer-bottom .bottom-actions a {
   justify-content: space-between;
   gap: 150px;
 }
+@media only screen and (max-width: 768px) {
+  .homepage-container .homepage-head .hero {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
 .homepage-container .homepage-head .hero .hero-intro {
   display: flex;
   flex-direction: column;
   gap: 16px;
   flex-wrap: 1;
-}
-.homepage-container .homepage-head .hero .hero-intro span {
-  color: #fff;
 }
 .homepage-container .homepage-head .hero .hero-intro .hero-description {
   color: #FFF;
@@ -1023,6 +1245,11 @@ footer .footer-bottom .bottom-actions a {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+@media only screen and (max-width: 768px) {
+  .homepage-container .homepage-head .hero .hero-form {
+    width: 100%;
+  }
 }
 .homepage-container .homepage-head .hero .hero-form .form-header {
   display: flex;
@@ -1095,6 +1322,14 @@ footer .footer-bottom .bottom-actions a {
   align-items: center;
   gap: 32px;
 }
+@media only screen and (max-width: 768px) {
+  .homepage-container .partners-section {
+    padding: 50px 16px;
+  }
+}
+.homepage-container .partners-section .logo-strip {
+  width: 100%;
+}
 .homepage-container .partners-section .section-title {
   color: #000;
   font-size: 24px;
@@ -1102,21 +1337,31 @@ footer .footer-bottom .bottom-actions a {
   font-weight: 500;
   line-height: 120%;
 }
-.homepage-container .partners-section .partners {
-  display: flex;
-  align-items: center;
-  gap: 42px;
-}
 .homepage-container .homepage-services-section {
   padding: 0px 50px;
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
+@media only screen and (max-width: 768px) {
+  .homepage-container .homepage-services-section {
+    gap: 24px;
+    padding: 0;
+  }
+}
 .homepage-container .homepage-services-section .section-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media only screen and (max-width: 768px) {
+  .homepage-container .homepage-services-section .section-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .homepage-container .homepage-services-section .section-header .section-title {
+    text-align: center;
+  }
 }
 .homepage-container .homepage-services-section .section-body .section-intro {
   padding: 16px !important;
@@ -1147,12 +1392,9 @@ footer .footer-bottom .bottom-actions a {
 .homepage-container .homepage-services-section .grid-container > .grid-item:nth-child(-n+2) {
   grid-column: span 3;
 }
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .homepage-container .homepage-services-section .grid-container {
-    grid-template-columns: 1fr;
-  }
-  .homepage-container .homepage-services-section .grid-container > .grid-item {
-    grid-column: auto;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 .homepage-container .audience-and-vision {
@@ -1161,36 +1403,48 @@ footer .footer-bottom .bottom-actions a {
   flex-direction: column;
   gap: 50px;
 }
+@media only screen and (max-width: 768px) {
+  .homepage-container .audience-and-vision {
+    padding: 50px 0;
+    gap: 24px;
+  }
+}
 .homepage-container .audience-and-vision .section-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
 }
+@media only screen and (max-width: 768px) {
+  .homepage-container .audience-and-vision .section-header .section-title {
+    text-align: center;
+  }
+}
 .homepage-container .audience-and-vision .section-header .section-description-gray {
   text-align: center;
 }
 .homepage-container .audience-and-vision .section-body {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
-.homepage-container .audience-and-vision .section-body .image-card {
-  width: 50%;
-}
-.homepage-container .audience-and-vision .section-body .section-info {
-  width: 50%;
-  height: 387px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 16px;
+@media only screen and (max-width: 768px) {
+  .homepage-container .audience-and-vision .section-body {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .homepage-container .faq-section {
   padding: 0 50px 100px 50px;
   display: flex;
   align-items: center;
   gap: 100px;
+}
+@media only screen and (max-width: 768px) {
+  .homepage-container .faq-section {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0;
+  }
 }
 .homepage-container .faq-section .section-intro {
   display: flex;
@@ -1199,6 +1453,12 @@ footer .footer-bottom .bottom-actions a {
   gap: 12px;
   width: 40%;
 }
+@media only screen and (max-width: 768px) {
+  .homepage-container .faq-section .section-intro {
+    width: 100%;
+    align-items: center;
+  }
+}
 .homepage-container .faq-section .section-intro .form-button {
   margin-top: 12px;
   width: -moz-fit-content;
@@ -1206,6 +1466,11 @@ footer .footer-bottom .bottom-actions a {
 }
 .homepage-container .faq-section .accordion {
   width: 60%;
+}
+@media only screen and (max-width: 768px) {
+  .homepage-container .faq-section .accordion {
+    width: 100%;
+  }
 }
 .homepage-container .blogs-section {
   padding: 0 50px 100px 50px;
@@ -1566,7 +1831,7 @@ footer .footer-bottom .bottom-actions a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 923px;
+  height: 923px;
   padding: 24px 50px 32px 50px;
   border-radius: 16px;
 }

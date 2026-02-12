@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="view">
+<body id="view" class="view-delay">
 
     <div class="homepage-container">
 
         <!-- homepage head start -->
-        <div class="homepage-head">
+        <div class="homepage-head animated-head">
 
             <header>
 
@@ -25,7 +25,7 @@
                 </a>
 
                 <!-- nav start -->
-                <nav>                    
+                <nav>
 
                     <a href="index.html">
                         <div class="circle"></div>
@@ -73,9 +73,62 @@
                         </ul>
                     </div>
 
-                    <a href="#" class="form-button">Müraciət göndər</a>
+                    <a href="" class="hover-button">
+                        <span class="label">Müraciət göndər</span>
+                        <img src="assets/icons/arrow-up-white.svg" alt="">
+                    </a>
 
                 </div>
+
+                <!-- offcanvas start -->
+                <button class="menu-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight">
+                    <img src="assets/icons/menu-icon.svg" alt="">
+                </button>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+
+                    <div class="offcanvas-header">
+                        <div class="logo-div">
+                            <img src="assets/images/logo.png" alt="">
+                        </div>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+
+                        <div class="offcanvas-navs">
+                            <a href="index.html" class="nav-link"><span>Ana səhifə</span> <img
+                                    src="assets/icons/arrow-up.svg" alt=""></a>
+                            <a href="aboutUs.html" class="nav-link"><span>Haqqımızda</span> <img
+                                    src="assets/icons/arrow-up.svg" alt=""></a>
+                            <a href="services.html" class="nav-link"><span>Xidmətlər</span> <img
+                                    src="assets/icons/arrow-up.svg" alt=""></a>
+                            <a href="logistics.html" class="nav-link"><span>Logistika</span> <img
+                                    src="assets/icons/arrow-up.svg" alt=""></a>
+                            <a href="cases.html" class="nav-link"><span>Keyslər</span> <img
+                                    src="assets/icons/arrow-up.svg" alt=""></a>
+                            <a href="blog.html" class="nav-link"><span>Bloq</span> <img src="assets/icons/arrow-up.svg"
+                                    alt=""></a>
+                            <a href="contactUs.html" class="nav-link"><span>Əlaqə</span> <img src="assets/icons/arrow-up.svg"
+                                    alt=""></a>
+                        </div>
+
+                        <div class="offcanvas-actions">
+
+                            <a href="" class="hover-button">
+                                <span class="label">Müraciət göndər</span>
+                                <img src="assets/icons/arrow-up-white.svg" alt="">
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- offcanvas end -->
 
             </header>
 
@@ -92,9 +145,15 @@
 
                     <div class="hero-actions">
 
-                        <a href="#" class="form-button">Müraciət göndər</a>
+                        <a href="" class="hover-button">
+                            <span class="label">Müraciət göndər</span>
+                            <img src="assets/icons/arrow-up-white.svg" alt="">
+                        </a>
 
-                        <a href="#" class="free-consultation">Free Consultation</a>
+                        <a href="" class="hover-button-white">
+                            <span class="label">Free Consultation</span>
+                            <img src="assets/icons/arrow-up.svg" alt="">
+                        </a>
 
                     </div>
                 </div>
@@ -265,7 +324,6 @@
             </div>
 
         </div>
-
         <!-- homepage head end -->
 
         <!-- partners start -->
@@ -273,30 +331,34 @@
 
             <span class="section-title">Partners of world leading companies</span>
 
-            <div class="partners">
+            <div class="logo-strip">
 
-                <div class="partner-logo">
-                    <img src="assets/images/partner.svg" alt="">
-                </div>
+                <div class="track">
+                    <div class="logo-div">
+                        <img src="assets/images/partner.svg" alt="">
+                    </div>
+                    <div class="logo-div">
+                        <img src="assets/images/partner2.svg" alt="">
+                    </div>
+                    <div class="logo-div">
+                        <img src="assets/images/partner3.svg" alt="">
+                    </div>
+                    <div class="logo-div">
+                        <img src="assets/images/partner4.svg" alt="">
+                    </div>
+                    <div class="logo-div">
+                        <img src="assets/images/partner2.svg" alt="">
+                    </div>
+                    <div class="logo-div">
+                        <img src="assets/images/partner5.svg" alt="">
+                    </div>
+                    <div class="logo-div">
+                        <img src="assets/images/partner.svg" alt="">
+                    </div>
+                    <div class="logo-div">
+                        <img src="assets/images/partner3.svg" alt="">
+                    </div>
 
-                <div class="partner-logo">
-                    <img src="assets/images/partner2.svg" alt="">
-                </div>
-
-                <div class="partner-logo">
-                    <img src="assets/images/partner3.svg" alt="">
-                </div>
-
-                <div class="partner-logo">
-                    <img src="assets/images/partner4.svg" alt="">
-                </div>
-
-                <div class="partner-logo">
-                    <img src="assets/images/partner5.svg" alt="">
-                </div>
-
-                <div class="partner-logo">
-                    <img src="assets/images/partner.svg" alt="">
                 </div>
 
             </div>
@@ -469,7 +531,10 @@
                 <p class="section-description-gray">Got questions? You’re not alone. If you don’t see what you’re
                     looking for, just reach out — we’re always happy to help.</p>
 
-                <a href="contactUs.html" class="form-button">Contact us</a>
+                <a href="" class="hover-button">
+                    <span class="label">Contact us</span>
+                    <img src="assets/icons/arrow-up-white.svg" alt="">
+                </a>
             </div>
 
             <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -582,7 +647,10 @@
 
             <div class="section-header">
                 <span class="section-title">Insights, Trends, and Strategies to Grow Your Business</span>
-                <a href="blogs.html" class="form-button">See all blogs</a>
+                <a href="blog.html" class="hover-button">
+                    <span class="label">See all blogs</span>
+                    <img src="assets/icons/arrow-up-white.svg" alt="">
+                </a>
             </div>
 
             <div class="section-body">
@@ -653,33 +721,76 @@
 
             <div class="section-body">
 
-                <div class="customer-review">
-                    <div class="review-header">
-                        <div class="customer-image">
-                            <img src="assets/images/customer-img.jpg" alt="">
-                        </div>
-                        <p class="review-content">
-                            "The team helped us streamline our strategy and boosted our revenue within months.
-                            Their approach is practical, actionable, and results-driven."
-                        </p>
-                    </div>
+                <!-- Swiper -->
+                <div class="swiper customerSwiper">
+                    <div class="swiper-wrapper">
 
-                    <div class="review-body">
-                        <span class="customer-name">Michael Chen</span>
-                        <span class="customer-position">CEO, BrightWave Solutions</span>
+                        <div class="swiper-slide">
+                            <div class="customer-review">
+                                <div class="review-header">
+                                    <div class="customer-image">
+                                        <img src="assets/images/customer-img.jpg" alt="">
+                                    </div>
+                                    <p class="review-content">
+                                        "The team helped us streamline our strategy and boosted our revenue within
+                                        months.
+                                        Their approach is practical, actionable, and results-driven."
+                                    </p>
+                                </div>
+                                <div class="review-body">
+                                    <span class="customer-name">Michael Chen</span>
+                                    <span class="customer-position">CEO, BrightWave Solutions</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="customer-review">
+                                <div class="review-header">
+                                    <div class="customer-image">
+                                        <img src="assets/images/customer-img.jpg" alt="">
+                                    </div>
+                                    <p class="review-content">
+                                        "Working with them was a turning point. We gained clarity, improved efficiency,
+                                        and scaled faster."
+                                    </p>
+                                </div>
+                                <div class="review-body">
+                                    <span class="customer-name">Sarah Johnson</span>
+                                    <span class="customer-position">Founder, NorthBridge</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="customer-review">
+                                <div class="review-header">
+                                    <div class="customer-image">
+                                        <img src="assets/images/customer-img.jpg" alt="">
+                                    </div>
+                                    <p class="review-content">
+                                        "Highly professional. Clear strategy, measurable results, and great
+                                        communication."
+                                    </p>
+                                </div>
+                                <div class="review-body">
+                                    <span class="customer-name">David Lee</span>
+                                    <span class="customer-position">COO, Atlas Group</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
                 <div class="swipe-buttons">
-
-                    <button class="swipe-button btn-prew">
+                    <button class="swipe-button btn-prew" type="button">
                         <img src="assets/icons/arrow-left.svg" alt="">
                     </button>
 
-                    <button class="swipe-button btn-next">
+                    <button class="swipe-button btn-next" type="button">
                         <img src="assets/icons/arrow-left.svg" alt="">
                     </button>
-
                 </div>
 
             </div>
@@ -697,7 +808,10 @@
                     </p>
 
                     <div class="intro-actions">
-                        <a href="#" class="btn-white">Send a request</a>
+                        <a href="" class="hover-button-white">
+                            <span class="label">Send a Request</span>
+                            <img src="assets/icons/arrow-up.svg" alt="">
+                        </a>
                         <a href="#" class="whatsapp-button">
                             <img src="assets/icons/wp-icon.png" alt="">
                             <span>Write us on Whatsapp</span>
@@ -830,6 +944,8 @@
         </script>
     <script src="assets/js/numericInput.js"></script>
     <script src="assets/js/pageTransitions.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="assets/js/reviewSwiper.js"></script>
 
 </body>
 

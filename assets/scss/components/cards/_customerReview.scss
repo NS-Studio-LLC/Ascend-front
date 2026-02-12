@@ -1,55 +1,91 @@
+/* Swiper container */
+.customerSwiper {
+  width: 100%;
+}
+
+/* Fade effektdə slide-lar üst-üstə düşür, ona görə */
+.customerSwiper .swiper-slide {
+  height: auto;
+}
+
+/* ✅ Sola sürüşmə hissi üçün */
+.customerSwiper .swiper-slide .customer-review {
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Active olan normal */
+.customerSwiper .swiper-slide-active .customer-review {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Əvvəlki (fade-out olan) azca sola getsin */
+.customerSwiper .swiper-slide-prev .customer-review {
+  transform: translateX(-40px);
+  opacity: 0;
+}
+
+/* Növbəti (fade-in olan) sağdan gəlsin */
+.customerSwiper .swiper-slide-next .customer-review {
+  transform: translateX(40px);
+  opacity: 0;
+}
+
+/* Sənin mövcud customer-review stillərin olduğu kimi qalır */
 .customer-review {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .review-header {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: 16px;
 
-    .review-header {
-        display: flex;
-        align-items: center;
-        gap: 16px;
+    .customer-image {
+      min-width: 80px;
+      min-height: 80px;
+      border-radius: 12px;
+      overflow: hidden;
 
-        .customer-image {
-            min-width: 80px;
-            min-height: 80px;
-            border-radius: 12px;
-            overflow: hidden;
-
-            img {
-                object-fit: cover;
-                width: 80px;
-                height: 80px;
-            }
-        }
-
-        .review-content {
-            color: #000;
-            font-size: 18px;
-            font-style: italic;
-            font-weight: 500;
-            line-height: 120%;
-        }
+      img {
+        object-fit: cover;
+        width: 80px;
+        height: 80px;
+      }
     }
 
-    .review-body {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
+    .review-content {
+      color: #000;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 120%;
+    }
+  }
 
-        .customer-name {
-            color: #000;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 120%;
-        }
+  .review-body {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 
-        .customer-position {
-            color: rgba(0, 0, 0, 0.50);
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 120%;
-        }
+    .customer-name {
+      color: #000;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 120%;
     }
 
+    .customer-position {
+      color: rgba(0, 0, 0, 0.50);
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 120%;
+    }
+  }
+}
+
+/* Optional: next button icon rotate */
+.btn-next img {
+  transform: rotate(180deg);
 }

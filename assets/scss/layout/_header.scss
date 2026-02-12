@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 header {
     display: flex;
     align-items: center;
@@ -19,6 +21,10 @@ header {
         align-items: center;
         gap: 12px;
         padding: 0 12px;
+
+        @include mq(tablet-portrait-up) {
+            display: none;
+        }
 
         a {
             --dot: 6px;
@@ -78,6 +84,10 @@ header {
         align-items: center;
         gap: 16px;
 
+        @include mq(tablet-portrait-up) {
+            display: none;
+        }
+
         .btn-group {
 
             .dropdown-toggle {
@@ -111,6 +121,12 @@ header {
         }
 
 
+    }
+
+    .menu-button {
+        @include mq(tablet-portrait-down) {
+            display: none;
+        }
     }
 
 }

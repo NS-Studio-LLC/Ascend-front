@@ -1,5 +1,6 @@
 const view = document.querySelector("#view");
-const DURATION = 1000;
+const DURATION = 1000;  // animasiyanın öz müddəti (CSS ilə eyni)
+const DELAY_MS = 800;   // view-delay olanda tətbiq olunacaq gecikmə
 let isTransitioning = false;
 
 const nextFrame = () => new Promise((r) => requestAnimationFrame(() => r()));
@@ -8,10 +9,15 @@ const next2Frames = async () => {
   await nextFrame();
 };
 
+function getDelay() {
+  return document.body.classList.contains("view-delay") ? DELAY_MS : 0;
+}
+
 function setViewHeightTo(el) {
   if (!view || !el) return;
   view.style.height = el.scrollHeight + "px";
 }
+
 function clearViewHeight() {
   if (!view) return;
   view.style.height = "auto";
@@ -28,8 +34,8 @@ function wrapInitialContentOnce() {
   view.appendChild(old);
 
   view.dataset.layered = "1";
-
   setViewHeightTo(old);
+
   return true;
 }
 
@@ -49,43 +55,42 @@ function cleanupStrayLayers() {
   });
 }
 
-/* ✅ homepage-head real height -> 200px animasiyası */
-async function shrinkHomepageHead(oldLayer, targetPx = 360) {
-  const head = oldLayer.querySelector(".homepage-head");
-  if (!head) return;
+/* ✅ animated-head real height -> targetPx animasiyası (1 və ya çox element üçün) */
+async function shrinkAnimatedHeads(oldLayer, targetPx = 360) {
+  const heads = oldLayer.querySelectorAll(".animated-head");
+  if (!heads || heads.length === 0) return;
 
-  // real height ölç
-  const from = head.scrollHeight;
+  heads.forEach(async (head) => {
+    const from = head.scrollHeight;
+    if (from <= targetPx) return;
 
-  // əgər onsuz da kiçikdirsə heç nə etmə
-  if (from <= targetPx) return;
+    head.style.height = from + "px";
+    head.style.overflow = "hidden";
 
-  // 1) height-i rəqəm olaraq set et (auto əvəzinə)
-  head.style.height = from + "px";
-  head.style.overflow = "hidden";
+    await next2Frames();
 
-  // 2) bir frame gözlə ki, brauzer bunu tətbiq etsin
-  await next2Frames();
-
-  // 3) transition üçün class ver
-  head.classList.add("is-shrinking");
-
-  // 4) hədəfə animasiya et
-  head.style.height = targetPx + "px";
+    head.classList.add("is-shrinking");
+    head.style.height = targetPx + "px";
+  });
 }
 
-function resetHomepageHeadStyles(layer) {
-  const head = layer?.querySelector(".homepage-head");
-  if (!head) return;
-  head.classList.remove("is-shrinking");
-  head.style.height = "";
-  head.style.overflow = "";
+function resetAnimatedHeadStyles(layer) {
+  const heads = layer?.querySelectorAll(".animated-head");
+  if (!heads || heads.length === 0) return;
+
+  heads.forEach((head) => {
+    head.classList.remove("is-shrinking");
+    head.style.height = "";
+    head.style.overflow = "";
+  });
 }
 
 async function navigate(url, { push = true } = {}) {
   if (!view) return;
   if (isTransitioning) return;
   isTransitioning = true;
+
+  const delay = getDelay();
 
   const justWrapped = wrapInitialContentOnce();
   cleanupStrayLayers();
@@ -101,12 +106,10 @@ async function navigate(url, { push = true } = {}) {
     await next2Frames();
   }
 
-  // köhnə hündürlüyü sabitle
   setViewHeightTo(oldLayer);
 
-  // ✅ Ana səhifədən çıxanda homepage-head 200px-ə qədər kiçilsin
-  // (yalnız homepage-də .homepage-head var)
-  shrinkHomepageHead(oldLayer, 360);
+  // ✅ animated-head olan hər yeri kiçilt
+  shrinkAnimatedHeads(oldLayer, 360);
 
   // yeni səhifəni gətir
   let html = "";
@@ -129,28 +132,15 @@ async function navigate(url, { push = true } = {}) {
     return;
   }
 
-  // yeni layer
   const newLayer = document.createElement("div");
   newLayer.className = "layer new";
   newLayer.innerHTML = nextView.innerHTML;
   view.appendChild(newLayer);
 
-  // yeni kontent hündürlüyünə görə #view-i yenilə
   setViewHeightTo(newLayer);
 
   document.title = nextTitle;
   if (push) history.pushState({}, "", url);
-
-  // opacity animasiyalar
-  requestAnimationFrame(() => {
-    oldLayer.classList.add("is-leaving");
-  });
-
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      newLayer.classList.add("is-entering");
-    });
-  });
 
   const finish = () => {
     if (oldLayer?.isConnected) oldLayer.remove();
@@ -158,33 +148,40 @@ async function navigate(url, { push = true } = {}) {
     if (newLayer?.isConnected) {
       newLayer.classList.remove("new", "is-entering");
       newLayer.classList.add("old");
-
-      // ✅ yeni layer-də (ana səhifəyə qayıdanda) əvvəlki inline height qalmasın
-      resetHomepageHeadStyles(newLayer);
+      resetAnimatedHeadStyles(newLayer);
     }
 
     clearViewHeight();
     isTransitioning = false;
   };
 
-  once(oldLayer, "transitionend", (e) => {
-    if (e.propertyName !== "opacity") return;
-    finish();
-  });
+  const startAnimation = () => {
+    requestAnimationFrame(() => oldLayer.classList.add("is-leaving"));
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => newLayer.classList.add("is-entering"));
+    });
+
+    once(oldLayer, "transitionend", (e) => {
+      if (e.propertyName !== "opacity") return;
+      finish();
+    });
+  };
+
+  if (delay > 0) setTimeout(startAnimation, delay);
+  else startAnimation();
 
   setTimeout(() => {
     const stillOld = view.querySelector(".layer.old.is-leaving");
     const stillNew = view.querySelector(".layer.new.is-entering");
     if (stillOld || stillNew) finish();
     else isTransitioning = false;
-  }, DURATION + 200);
+  }, delay + DURATION + 300);
 }
 
 // link intercept
 document.addEventListener("click", (e) => {
   const a = e.target.closest("a");
   if (!a) return;
-
   if (a.dataset.bsToggle) return;
 
   let href = a.getAttribute("href");
@@ -214,5 +211,4 @@ window.addEventListener("popstate", () => {
   navigate(file, { push: false });
 });
 
-// init
 wrapInitialContentOnce();

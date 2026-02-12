@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 .homepage-container {
     padding: 16px;
 
@@ -9,7 +11,11 @@
         height: 923px;
         padding: 24px 50px 32px 50px;
         border-radius: 16px;
-        overflow: hidden;
+
+        @include mq(tablet-portrait-up) {
+            padding: 24px 16px;
+            height: auto;
+        }
 
         .hero {
             padding-top: 70px;
@@ -17,15 +23,16 @@
             justify-content: space-between;
             gap: 150px;
 
+            @include mq(tablet-portrait-up) {
+                flex-direction: column;
+                gap: 32px;
+            }
+
             .hero-intro {
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
                 flex-wrap: 1;
-
-                span {
-                    color: #fff;
-                }
 
                 .hero-description {
                     color: #FFF;
@@ -65,6 +72,10 @@
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
+
+                @include mq(tablet-portrait-up) {
+                    width: 100%;
+                }
 
                 .form-header {
                     display: flex;
@@ -168,18 +179,21 @@
         align-items: center;
         gap: 32px;
 
+        @include mq(tablet-portrait-up) {
+            padding: 50px 16px;
+        }
+
+        .logo-strip {
+            width: 100%;
+
+        }
+
         .section-title {
             color: #000;
             font-size: 24px;
             font-style: normal;
             font-weight: 500;
             line-height: 120%;
-        }
-
-        .partners {
-            display: flex;
-            align-items: center;
-            gap: 42px;
         }
     }
 
@@ -189,10 +203,24 @@
         flex-direction: column;
         gap: 32px;
 
+        @include mq(tablet-portrait-up) {
+            gap: 24px;
+            padding: 0;
+        }
+
         .section-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            @include mq(tablet-portrait-up) {
+                flex-direction: column;
+                gap: 12px;
+
+                .section-title {
+                    text-align: center;
+                }
+            }
         }
 
         .section-body {
@@ -232,12 +260,8 @@
                 }
             }
 
-            @media (max-width: 768px) {
-                grid-template-columns: 1fr;
-
-                >.grid-item {
-                    grid-column: auto
-                }
+            @include mq(tablet-portrait-up) {
+                grid-template-columns: repeat(1, 1fr);
             }
 
         }
@@ -249,11 +273,24 @@
         flex-direction: column;
         gap: 50px;
 
+        @include mq(tablet-portrait-up) {
+            padding: 50px 0;
+            gap: 24px;
+        }
+
         .section-header {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 16px;
+
+            @include mq(tablet-portrait-up) {
+                .section-title {
+                    text-align: center;
+                }
+            }
+
+
 
             .section-description-gray {
                 text-align: center;
@@ -261,23 +298,13 @@
         }
 
         .section-body {
-            display: flex;
-            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 16px;
 
-            .image-card {
-                width: 50%;
+            @include mq(tablet-portrait-up) {
+                grid-template-columns: repeat(1, 1fr);
             }
-
-            .section-info {
-                width: 50%;
-                height: 387px;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                gap: 16px;
-            }
-
         }
     }
 
@@ -287,12 +314,23 @@
         align-items: center;
         gap: 100px;
 
+        @include mq(tablet-portrait-up) {
+            flex-direction: column;
+            gap: 24px;
+            padding: 0;
+        }
+
         .section-intro {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             gap: 12px;
             width: 40%;
+
+            @include mq(tablet-portrait-up) {
+                width: 100%;
+                align-items: center;
+            }
 
             .form-button {
                 margin-top: 12px;
@@ -302,6 +340,10 @@
 
         .accordion {
             width: 60%;
+
+            @include mq(tablet-portrait-up) {
+                width: 100%;
+            }
         }
     }
 

@@ -15,6 +15,7 @@
   opacity: 1;
   transition: opacity 1s ease;
 }
+
 #view .layer.old.is-leaving {
   opacity: 0;
   pointer-events: none;
@@ -25,15 +26,17 @@
   opacity: 0;
   transition: opacity 1s ease;
 }
+
 #view .layer.new.is-entering {
   opacity: 1;
 }
 
-#view .homepage-head {
-  overflow: hidden; 
+#view .animated-head {
+  overflow: hidden;
   will-change: height;
 }
 
-#view .homepage-head.is-shrinking {
-  transition: height 800ms ease;
+#view .animated-head.is-shrinking {
+  transition: height 1000ms ease;
 }
+
