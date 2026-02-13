@@ -1,25 +1,16 @@
+@use '../abstracts/mixins' as *;
+
 .cases-page-container {
-    padding: 16px;
-
-    .cases-head {
-        padding: 24px 50px 32px 50px;
-        border-radius: 16px;
-        background: #1B344D;
-
-        .hero {
-            margin-top: 70px;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            width: 60%;
-        }
-    }
 
     .our-cases {
         padding: 50px 50px 0px 50px;
         display: flex;
         flex-direction: column;
         gap: 32px;
+
+        @include mq(tablet-portrait-up) {
+            padding: 50px 0 50px 0;
+        }
 
         .section-body {
             display: flex;
@@ -29,6 +20,10 @@
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 16px;
+
+                @include mq(tablet-portrait-up) {
+                    grid-template-columns: repeat(1, 1fr);
+                }
 
                 .customer-review-section {
                     display: flex;
@@ -48,11 +43,20 @@
 
             .case-two {
                 padding-top: 100px;
+
+                @include mq(tablet-portrait-up) {
+                    padding-top: 50px;
+                }
             }
 
             .case-three {
                 padding-top: 100px;
                 padding-bottom: 100px;
+
+                @include mq(tablet-portrait-up) {
+                    padding-top: 50px;
+                    padding-bottom: 0px;
+                }
             }
 
         }

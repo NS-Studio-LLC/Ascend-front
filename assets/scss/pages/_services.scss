@@ -1,25 +1,27 @@
+@use '../abstracts/mixins' as *;
+
 .services-page-container {
-    padding: 16px;
-
-    .services-head {
-        padding: 24px 50px 32px 50px;
-        border-radius: 16px;
-        background: #1B344D;
-
-        .hero {
-            margin-top: 70px;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            width: 60%;
-        }
-    }
 
     .services-section {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
         padding: 50px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
+
+        @include mq(tablet-portrait-up) {
+            padding: 50px 0 50px 0;
+        }
+
+        .section-body {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+
+            @include mq(tablet-portrait-up) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
 
     }
 

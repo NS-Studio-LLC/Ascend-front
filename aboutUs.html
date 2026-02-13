@@ -3,7 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Təməl viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- Zoom meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Ascent</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
@@ -13,60 +16,136 @@
 
 <body id="view">
 
+    <div class="page-container">
 
-        <div class="about-us-page-container">
+        <!-- page head start -->
+        <div class="page-head">
 
-            <!-- about us head start -->
-            <div class="about-us-head">
+            <header>
 
-                <header>
+                <a href="/" class="logo-div">
+                    <img src="assets/images/logo-layer.png" alt="">
+                </a>
 
-                    <a href="index.html" class="logo-div">
-                        <img src="assets/images/logo-layer.png" alt="">
+                <!-- nav start -->
+                <nav>
+
+                    <a href="index.html">
+                        <div class="circle"></div>
+                        <span>Ana Səhifə</span>
+                    </a>
+                    <a href="aboutUs.html">
+                        <div class="circle"></div>
+                        <span>Haqqımızda</span>
+                    </a>
+                    <a href="services.html">
+                        <div class="circle"></div>
+                        <span>Xidmətlər</span>
+                    </a>
+                    <a href="logistics.html">
+                        <div class="circle"></div>
+                        <span>Logistika</span>
+                    </a>
+                    <a href="cases.html">
+                        <div class="circle"></div>
+                        <span>Keyslər</span>
+                    </a>
+                    <a href="blog.html">
+                        <div class="circle"></div>
+                        <span>Bloq</span>
+                    </a>
+                    <a href="contactUs.html">
+                        <div class="circle"></div>
+                        <span>Əlaqə</span>
                     </a>
 
-                    <!-- nav start -->
-                    <nav>
+                </nav>
+                <!-- nav end -->
 
-                        <a href="index.html">Ana Səhifə</a>
-                        <a href="aboutUs.html">Haqqımızda</a>
-                        <a href="services.html">Xidmətlər</a>
-                        <a href="logistics.html">Logistika</a>
-                        <a href="cases.html">Keyslər</a>
-                        <a href="blog.html">Bloq</a>
-                        <a href="contactUs.html">Əlaqə</a>
+                <div class="header-actions">
 
-                    </nav>
-                    <!-- nav end -->
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <div class="circle"></div>
+                            AZ
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">En</a></li>
+                            <li><a class="dropdown-item" href="#">Ru</a></li>
+                        </ul>
+                    </div>
 
-                    <div class="header-actions">
+                    <a href="" class="hover-button">
+                        <span class="label">Müraciət göndər</span>
+                        <img src="assets/icons/arrow-up-white.svg" alt="">
+                    </a>
 
-                        <div class="btn-group">
-                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <div class="circle"></div>
-                                AZ
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">En</a></li>
-                                <li><a class="dropdown-item" href="#">Ru</a></li>
-                            </ul>
+                </div>
+
+                <!-- offcanvas start -->
+                <button class="menu-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight">
+                    <img src="assets/icons/menu-icon.svg" alt="">
+                </button>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+
+                    <div class="offcanvas-header">
+                        <div class="logo-div">
+                            <img src="assets/images/logo.png" alt="">
+                        </div>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+
+                        <div class="offcanvas-navs">
+                            <a href="index.html" class="nav-link"><span>Ana səhifə</span> <img
+                                    src="assets/icons/arrow-up.svg" alt=""></a>
+                            <a href="aboutUs.html" class="nav-link"><span>Haqqımızda</span> <img
+                                    src="assets/icons/arrow-up.svg" alt=""></a>
+                            <a href="services.html" class="nav-link"><span>Xidmətlər</span> <img
+                                    src="assets/icons/arrow-up.svg" alt=""></a>
+                            <a href="logistics.html" class="nav-link"><span>Logistika</span> <img
+                                    src="assets/icons/arrow-up.svg" alt=""></a>
+                            <a href="cases.html" class="nav-link"><span>Keyslər</span> <img
+                                    src="assets/icons/arrow-up.svg" alt=""></a>
+                            <a href="blog.html" class="nav-link"><span>Bloq</span> <img src="assets/icons/arrow-up.svg"
+                                    alt=""></a>
+                            <a href="contactUs.html" class="nav-link"><span>Əlaqə</span> <img
+                                    src="assets/icons/arrow-up.svg" alt=""></a>
                         </div>
 
-                        <a href="#" class="form-button">Müraciət göndər</a>
+                        <div class="offcanvas-actions">
+
+                            <a href="" class="hover-button">
+                                <span class="label">Müraciət göndər</span>
+                                <img src="assets/icons/arrow-up-white.svg" alt="">
+                            </a>
+
+                        </div>
 
                     </div>
 
-                </header>
-
-                <div class="hero">
-                    <span class="hero-title">Building Smarter Businesses, One Strategy at a Time</span>
-                    <p class="hero-description">We are a team of experienced consultants dedicated to helping businesses
-                        grow, optimize operations, and achieve measurable results. </p>
                 </div>
+                <!-- offcanvas end -->
 
+            </header>
+
+            <div class="hero">
+                <span class="hero-title">Building Smarter Businesses, One Strategy at a Time</span>
+                <p class="hero-description">We are a team of experienced consultants dedicated to helping businesses
+                    grow, optimize operations, and achieve measurable results. </p>
             </div>
-            <!-- about us head end -->
+
+        </div>
+        <!-- page head end -->
+
+        <!-- page start -->
+        <div class="about-us-page-container">
 
             <!-- about us start -->
             <div class="about-us-section">
@@ -281,7 +360,10 @@
                         </p>
 
                         <div class="intro-actions">
-                            <a href="#" class="btn-white">Send a request</a>
+                            <a href="" class="hover-button-white">
+                                <span class="label">Send a Request</span>
+                                <img src="assets/icons/arrow-up.svg" alt="">
+                            </a>
                             <a href="#" class="whatsapp-button">
                                 <img src="assets/icons/wp-icon.png" alt="">
                                 <span>Write us on Whatsapp</span>
@@ -295,70 +377,74 @@
             </div>
             <!-- contact us section end -->
 
-            <!-- footer start -->
-            <footer>
+        </div>
+        <!-- page end -->
 
-                <div class="footer-top">
-                    <div class="footer-title">
-                        <span class="section-title">Biznesinizi böyütmək üçün düzgün qərarlar burada başlayır.</span>
+        <!-- footer start -->
+        <footer>
+
+            <div class="footer-top">
+                <div class="footer-title">
+                    <span class="section-title">Biznesinizi böyütmək üçün düzgün qərarlar burada başlayır.</span>
+                </div>
+                <div class="footer-infos">
+                    <div class="info-div">
+                        <span class="info-label">Location</span>
+                        <span class="info-content">457 Westbridge Ave, Manchester 234567</span>
                     </div>
-                    <div class="footer-infos">
-                        <div class="info-div">
-                            <span class="info-label">Location</span>
-                            <span class="info-content">457 Westbridge Ave, Manchester 234567</span>
-                        </div>
-                        <div class="info-div">
-                            <span class="info-label">Email</span>
-                            <span class="info-content">business.consulting@gamil.com</span>
-                        </div>
-                        <div class="info-div">
-                            <span class="info-label">Call us</span>
-                            <span class="info-content">+1200-555-0834</span>
-                        </div>
-                        <div class="info-div">
-                            <span class="info-label">open time</span>
-                            <span class="info-content">09:00am - 06:00pm</span>
-                        </div>
+                    <div class="info-div">
+                        <span class="info-label">Email</span>
+                        <span class="info-content">business.consulting@gamil.com</span>
+                    </div>
+                    <div class="info-div">
+                        <span class="info-label">Call us</span>
+                        <span class="info-content">+1200-555-0834</span>
+                    </div>
+                    <div class="info-div">
+                        <span class="info-label">open time</span>
+                        <span class="info-content">09:00am - 06:00pm</span>
                     </div>
                 </div>
+            </div>
 
-                <div class="footer-nav">
+            <div class="footer-nav">
 
+                <div class="navs">
                     <a href="/">Home</a>
                     <a href="aboutUs.html">About us</a>
                     <a href="services.html">Services</a>
                     <a href="blogs.html">Blogs</a>
                     <a href="contactUs.html">Contact us</a>
-
-                    <div class="social-links">
-                        <span>Social</span>
-                        <a href="#">
-                            <img src="assets/icons/wp-icon-black.svg" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="assets/icons/insta-icon.svg" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="assets/icons/telegram-icon.svg" alt="">
-                        </a>
-                    </div>
-
                 </div>
 
-                <div class="footer-bottom">
-                    <span class="copyright">© 2026 Ascend Business Consulting</span>
-
-                    <div class="bottom-actions">
-                        <a href="#">Terms & Conditions</a>
-                        <a href="#">Privacy Policy</a>
-                    </div>
+                <div class="social-links">
+                    <span>Social</span>
+                    <a href="#">
+                        <img src="assets/icons/wp-icon-black.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="assets/icons/insta-icon.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="assets/icons/telegram-icon.svg" alt="">
+                    </a>
                 </div>
 
-            </footer>
-            <!-- footer end -->
+            </div>
 
-        </div>
+            <div class="footer-bottom">
+                <span class="copyright">© 2026 Ascend Business Consulting</span>
 
+                <div class="bottom-actions">
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+
+        </footer>
+        <!-- footer end -->
+
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">

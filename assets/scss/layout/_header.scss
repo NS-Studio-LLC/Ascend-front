@@ -22,7 +22,7 @@ header {
         gap: 12px;
         padding: 0 12px;
 
-        @include mq(tablet-portrait-up) {
+        @include mq(desktop-up) {
             display: none;
         }
 
@@ -84,7 +84,7 @@ header {
         align-items: center;
         gap: 16px;
 
-        @include mq(tablet-portrait-up) {
+        @include mq(desktop-up) {
             display: none;
         }
 
@@ -124,7 +124,7 @@ header {
     }
 
     .menu-button {
-        @include mq(tablet-portrait-down) {
+        @include mq(desktop-down) {
             display: none;
         }
     }

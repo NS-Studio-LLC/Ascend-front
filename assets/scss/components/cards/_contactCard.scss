@@ -1,61 +1,93 @@
-    .contact-card {
-        padding: 0 50px 100px 50px;
+@use '../../abstracts/mixins' as *;
 
-        .section-body {
-            border-radius: 12px;
-            background: #16293A;
-            padding: 16px;
+.contact-card {
+    padding: 0 50px 100px 50px;
+
+    @include mq(tablet-portrait-up) {
+        padding: 0 0 50px 0;
+
+        .section-title-white{
+            text-align: center;
+        }
+
+        .section-description-white{
+            text-align: center;
+        }
+    }
+
+    .section-body {
+        border-radius: 12px;
+        background: #16293A;
+        padding: 16px;
+        display: flex;
+        gap: 24px;
+
+        @include mq(tablet-portrait-up) {
+            flex-direction: column;
+        }
+
+        .section-intro {
             display: flex;
-            gap: 24px;
+            flex-direction: column;
+            gap: 12px;
+            justify-content: flex-end;
+            width: 50%;
 
-            .section-intro {
+            @include mq(tablet-portrait-up) {
+                width: 100%;
+            }
+
+            .intro-actions {
+                margin-top: 12px;
                 display: flex;
-                flex-direction: column;
-                gap: 12px;
-                justify-content: flex-end;
-                width: 50%;
+                align-items: center;
+                gap: 24px;
 
-                .intro-actions {
-                    margin-top: 12px;
+                @include mq(tablet-portrait-up) {
+                    flex-direction: column;
+                    gap: 12px;
+                }
+
+                .whatsapp-button {
+                    padding: 12px;
+                    border-radius: 6px;
+                    background: #29D045;
                     display: flex;
                     align-items: center;
-                    gap: 24px;
+                    gap: 10px;
 
-                    .whatsapp-button {
-                        padding: 12px;
-                        border-radius: 6px;
-                        background: #29D045;
-                        display: flex;
-                        align-items: center;
-                        gap: 10px;
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
 
-                        img {
-                            width: 20px;
-                            height: 20px;
-                        }
-
-                        span {
-                            color: #FFF;
-                            font-size: 14px;
-                            font-style: normal;
-                            font-weight: 510;
-                            line-height: 140%;
-                        }
+                    span {
+                        color: #FFF;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 510;
+                        line-height: 140%;
                     }
                 }
             }
+        }
 
-            .section-image {
-                height: 355px;
-                width: 50%;
-                border-radius: 12px;
-                overflow: hidden;
+        .section-image {
+            height: 355px;
+            width: 50%;
+            border-radius: 12px;
+            overflow: hidden;
 
-                img {
-                    object-fit: cover;
-                    width: 100%;
-                    height: 100%;
-                }
+            @include mq(tablet-portrait-up) {
+                width: 100%;
+            }
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
             }
         }
     }
+    
+}

@@ -42,12 +42,16 @@
         @media only screen and (max-width: 1024px) {
             @content;
         }
-
-        ;
     }
 
     @else if $size ==desktop-up {
         @media only screen and (max-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if $size ==desktop-down {
+        @media only screen and (min-width: 1200px) {
             @content;
         }
     }

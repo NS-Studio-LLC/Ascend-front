@@ -1,30 +1,16 @@
+@use '../abstracts/mixins' as *;
+
 .blog-details-page-container {
-    padding: 16px;
-
-    .blog-details-head {
-        padding: 24px 50px 32px 50px;
-        border-radius: 16px;
-        background: #1B344D;
-        background: url('/assets/images/blog-details-hero.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-
-        .hero {
-            margin-top: 70px;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            width: 60%;
-        }
-
-    }
 
     .blog-details {
         display: flex;
         flex-direction: column;
         gap: 32px;
         padding: 32px 50px 50px 50px;
+
+        @include mq(tablet-portrait-up) {
+            padding: 32px 0 32px 0;
+        }
 
         .share-article {
             display: flex;
@@ -59,7 +45,6 @@
             }
         }
 
-
     }
 
     .recommended-blogs {
@@ -68,16 +53,30 @@
         flex-direction: column;
         gap: 32px;
 
+        @include mq(tablet-portrait-up) {
+            padding: 0 0 50px 0;
+        }
+
         .section-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            @include mq(tablet-portrait-up) {
+                flex-direction: column;
+                gap: 16px;
+            }
+
         }
 
-        .section-body{
+        .section-body {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 16px;
+
+            @include mq(tablet-portrait-up) {
+                grid-template-columns: repeat(1, 1fr);
+            }
         }
     }
 

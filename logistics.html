@@ -3,7 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Təməl viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- Zoom meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Ascent</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
@@ -13,10 +16,11 @@
 
 <body id="view">
 
-    <div class="logistics-page-container">
+    <div class="page-container">
 
-        <!-- logistics head start -->
-        <div class="logistics-head">
+
+        <!-- page head start -->
+        <div class="page-head">
             <header>
 
                 <a href="/" class="logo-div">
@@ -65,628 +69,645 @@
             </div>
 
         </div>
-        <!-- logistics head end -->
+        <!-- page head end -->
 
-        <!-- our partner start -->
-        <div class="our-partner">
+        <!-- page start -->
+        <div class="logistics-page-container">
 
-            <div class="section-header">
-                <span class="section-title">Ascend Group – Çin → Azərbaycan logistika tərəfdaşınız</span>
-                <p class="section-description-gray">
-                    Biz yük növünü, çatdırılma vaxtını və büdcəni nəzərə alaraq marşrutu optimallaşdırırıq. Göndərən
-                    nöqtəsindən alıcıya qədər bütün mərhələləri koordinasiya edir, proses boyunca izləmə və şəffaf
-                    məlumatlandırma təqdim edirik.
-                </p>
-            </div>
+            <!-- our partner start -->
+            <div class="our-partner">
 
-            <div class="section-body">
+                <div class="section-header">
+                    <span class="section-title">Ascend Group – Çin → Azərbaycan logistika tərəfdaşınız</span>
+                    <p class="section-description-gray">
+                        Biz yük növünü, çatdırılma vaxtını və büdcəni nəzərə alaraq marşrutu optimallaşdırırıq. Göndərən
+                        nöqtəsindən alıcıya qədər bütün mərhələləri koordinasiya edir, proses boyunca izləmə və şəffaf
+                        məlumatlandırma təqdim edirik.
+                    </p>
+                </div>
 
-                <div class="section-info-with-icon">
+                <div class="section-body">
 
-                    <div class="text-box">
+                    <div class="section-info-with-icon">
 
-                        <div class="icon">
-                            <img src="assets/icons/clock-icon.svg" alt="">
+                        <div class="text-box">
+
+                            <div class="icon">
+                                <img src="assets/icons/clock-icon.svg" alt="">
+                            </div>
+
+                            <div class="content">
+                                <span class="section-info-title">Vaxta uyğun planlama</span>
+                                <p class="section-info-description">
+                                    Sürətli və ya büdcəyə uyğun variantları aydın şəkildə təqdim edirik.
+                                </p>
+                            </div>
+
                         </div>
 
-                        <div class="content">
-                            <span class="section-info-title">Vaxta uyğun planlama</span>
-                            <p class="section-info-description">
-                                Sürətli və ya büdcəyə uyğun variantları aydın şəkildə təqdim edirik.
-                            </p>
+                        <div class="text-box">
+
+                            <div class="icon">
+                                <img src="assets/icons/protection-icon.svg" alt="">
+                            </div>
+
+                            <div class="content">
+                                <span class="section-info-title">Şəffaflıq</span>
+                                <p class="section-info-description">
+                                    Qiymət və proses addımlarını əvvəlcədən izah edirik — sürpriz yoxdur.
+                                </p>
+                            </div>
+
                         </div>
+
+                        <div class="text-box">
+
+                            <div class="icon">
+                                <img src="assets/icons/cursor-icon.svg" alt="">
+                            </div>
+
+                            <div class="content">
+                                <span class="section-info-title">End-to-end logistika</span>
+                                <p class="section-info-description">
+                                    Çindən çıxışdan Azərbaycanda təhvilə qədər nəzarət bizdədir.
+                                </p>
+                            </div>
+
+                        </div>
+
 
                     </div>
 
-                    <div class="text-box">
+                    <div class="image-card">
+                        <img src="assets/images/logistic-img.jpg" alt="">
 
-                        <div class="icon">
-                            <img src="assets/icons/protection-icon.svg" alt="">
-                        </div>
+                        <div class="card-badget"><span>Nə əldə edirsiniz?</span></div>
 
-                        <div class="content">
-                            <span class="section-info-title">Şəffaflıq</span>
-                            <p class="section-info-description">
-                                Qiymət və proses addımlarını əvvəlcədən izah edirik — sürpriz yoxdur.
+                        <div class="text-box">
+
+                            <span class="card-title">Etibarlı daşınma, aydın kommunikasiya:</span>
+
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
+                                        fill="#29D045" />
+                                    <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <span class="card-description-bold">Məişət texnikası və Elektronika (Qazaxıstan).</span>
                             </p>
-                        </div>
 
-                    </div>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
+                                        fill="#29D045" />
+                                    <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <span class="card-description-bold">Mərhələ-mərhələ izləmə və məlumatlandırma</span>
 
-                    <div class="text-box">
-
-                        <div class="icon">
-                            <img src="assets/icons/cursor-icon.svg" alt="">
-                        </div>
-
-                        <div class="content">
-                            <span class="section-info-title">End-to-end logistika</span>
-                            <p class="section-info-description">
-                                Çindən çıxışdan Azərbaycanda təhvilə qədər nəzarət bizdədir.
                             </p>
+
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
+                                        fill="#29D045" />
+                                    <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                                <span class="card-description-bold">Gömrük rəsmiləşdirilməsində dəstək</span>
+
+                            </p>
+
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
+                                        fill="#29D045" />
+                                    <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                                <span class="card-description-bold">Sığorta, qablaşdırma və qapıya çatdırılma
+                                    opsiyaları</span>
+
+                            </p>
+
                         </div>
-
                     </div>
-
 
                 </div>
 
-                <div class="image-card">
-                    <img src="assets/images/logistic-img.jpg" alt="">
+            </div>
+            <!-- our partner end -->
 
-                    <div class="card-badget"><span>Nə əldə edirsiniz?</span></div>
+            <!-- transportation options start -->
+            <div class="transportation-options">
+
+                <div class="section-header">
+                    <span class="section-title">Çin → Azərbaycan daşınma variantları</span>
+                    <span class="section-header-info">Yükünüz üçün ən uyğun kombinasiya seçilir.</span>
+                </div>
+
+                <div class="section-body">
+
+                    <div class="image-card">
+
+                        <img src="assets/images/logistic-img.jpg" alt="">
+
+                        <div class="text-box">
+
+                            <span class="card-title">Dəniz daşımaları</span>
+                            <p class="card-description-italic">Böyük və təcili olmayan yüklər üçün ən sərfəli seçim</p>
+
+                            <div class="features">
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
+                                            fill="#29D045" />
+                                        <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="card-description-bold">FCL & LCL formatları</span>
+                                </p>
+
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
+                                            fill="#29D045" />
+                                        <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="card-description-bold">Ən aşağı xərc</span>
+                                </p>
+
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
+                                            fill="#29D045" />
+                                        <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="card-description-bold">Stabil marşrut planlaması</span>
+                                </p>
+                            </div>
+
+                            <div class="parameters">
+
+                                <div class="parameter">
+                                    <span><b>Müddət:</b> 35–60 gün</span>
+                                </div>
+
+                                <div class="parameter">
+                                    <span><b>Uyğun:</b> Həcmli yüklər</span>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="image-card">
+
+                        <img src="assets/images/train.jpg" alt="">
+
+                        <div class="text-box">
+
+                            <span class="card-title">Dəmir yolu</span>
+                            <p class="card-description-italic">Sürət və qiymət balansı — daha proqnozlaşdırıla bilən
+                                çatdırılma</p>
+
+                            <div class="features">
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
+                                            fill="#29D045" />
+                                        <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="card-description-bold">Mərkəzi Asiya & Xəzər xətti</span>
+                                </p>
+
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
+                                            fill="#29D045" />
+                                        <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="card-description-bold">Stabil qrafik</span>
+                                </p>
+
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
+                                            fill="#29D045" />
+                                        <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="card-description-bold">Orta xərc</span>
+                                </p>
+                            </div>
+
+                            <div class="parameters">
+
+                                <div class="parameter">
+                                    <span><b>Müddət:</b> 12-25 gün</span>
+                                </div>
+
+                                <div class="parameter">
+                                    <span><b>Uyğun:</b> Planlı idxal</span>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="image-card">
+
+                        <img src="assets/images/train.jpg" alt="">
+
+                        <div class="text-box">
+
+                            <span class="card-title">Avtomobil</span>
+                            <p class="card-description-italic">Qapıdan-qapıya çevik logistika və marşrut elastikliyi</p>
+
+                            <div class="features">
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
+                                            fill="#29D045" />
+                                        <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="card-description-bold">Door-to-door</span>
+                                </p>
+
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
+                                            fill="#29D045" />
+                                        <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="card-description-bold">Çevik marşrut</span>
+                                </p>
+
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
+                                            fill="#29D045" />
+                                        <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="card-description-bold">LTL & FTL seçimləri</span>
+                                </p>
+                            </div>
+
+                            <div class="parameters">
+
+                                <div class="parameter">
+                                    <span><b>Müddət:</b> 15-30 gün</span>
+                                </div>
+
+                                <div class="parameter">
+                                    <span><b>Uyğun:</b> Elastik çatdırılma</span>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="image-card">
+
+                        <img src="assets/images/plane.jpg" alt="">
+
+                        <div class="text-box">
+
+                            <span class="card-title">Hava daşımaları</span>
+                            <p class="card-description-italic">Ən sürətli seçim — təcili və yüksək dəyərli yüklər üçün
+                            </p>
+
+                            <div class="features">
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
+                                            fill="#29D045" />
+                                        <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="card-description-bold">5–10 gün</span>
+                                </p>
+
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
+                                            fill="#29D045" />
+                                        <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="card-description-bold">Təcili və dəyərli yüklər</span>
+                                </p>
+
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
+                                            fill="#29D045" />
+                                        <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="card-description-bold">Daha yüksək xərc</span>
+                                </p>
+                            </div>
+
+                            <div class="parameters">
+
+                                <div class="parameter">
+                                    <span><b>Müddət:</b> 5-10 gün</span>
+                                </div>
+
+                                <div class="parameter">
+                                    <span><b>Uyğun:</b> Təcili göndəriş</span>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- transportation options end -->
+
+            <!-- choose option start -->
+            <div class="choose-option">
+
+                <div class="section-header">
+                    <span class="section-title">Hansı üsul sizə uyğundur?</span>
+                    <span class="section-header-info">Vaxt, büdcə və yük növünə görə seçim edin.</span>
+                </div>
+
+                <div class="section-body">
+
+                    <div class="table-div">
+                        <table class="transportation-options-table">
+
+                            <thead>
+                                <tr>
+                                    <th scope="col">Növ</th>
+                                    <th scope="col">Çatdırılma müddəti</th>
+                                    <th scope="col">Qiymət səviyyəsi</th>
+                                    <th scope="col">Ən uyğun</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>
+
+                                        <div class="transportation-type">
+                                            <div class="icon">
+                                                <img src="assets/icons/ship.svg" alt="">
+                                            </div>
+
+                                            <span>Dəniz daşımaları</span>
+                                        </div>
+
+                                    </td>
+                                    <td>35–60 gün</td>
+                                    <td>Aşağı</td>
+                                    <td>Böyük və təcili olmayan yüklər</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="transportation-type">
+                                            <div class="icon">
+                                                <img src="assets/icons/train.svg" alt="">
+                                            </div>
+
+                                            <span>Dəmir yolu</span>
+                                        </div>
+                                    </td>
+                                    <td>12–25 gün</td>
+                                    <td>Orta</td>
+                                    <td>Sürət–qiymət balansı, stabil qrafik</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="transportation-type">
+                                            <div class="icon">
+                                                <img src="assets/icons/car.svg" alt="">
+                                            </div>
+
+                                            <span>Avtomobil</span>
+                                        </div>
+                                    </td>
+                                    <td>15–30 gün</td>
+                                    <td>Orta</td>
+                                    <td>Qapıdan-qapıya, çevik marşrut</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="transportation-type">
+                                            <div class="icon">
+                                                <img src="assets/icons/plane.svg" alt="">
+                                            </div>
+
+                                            <span>Hava daşımaları</span>
+                                        </div>
+                                    </td>
+                                    <td>5–10 gün</td>
+                                    <td>Yüksək</td>
+                                    <td>Təcili, dəyərli və ya tez xarab olan yüklər</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="transportation-type">
+                                            <div class="icon">
+                                                <img src="assets/icons/user.svg" alt="">
+                                            </div>
+
+                                            <span>Tələbdən asılı</span>
+                                        </div>
+                                    </td>
+                                    <td>Tələbdən asılı</td>
+                                    <td>Dəyişkən</td>
+                                    <td>Fərdi həllər və kompleks marşrutlar</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                    <span class="warning">
+                        *Multimodal həllər marşrut və yük xüsusiyyətlərinə görə
+                        fərdiləşdirilir.
+                    </span>
+
+                </div>
+
+            </div>
+            <!-- choose option end -->
+
+            <!-- price factors start -->
+            <div class="price-factors grid-container">
+
+                <div class="image-card grid-item">
+                    <img src="assets/images/price-factors.jpg" alt="">
+
+                    <div class="card-badget">
+                        <span>Qiymət amilləri</span>
+                    </div>
 
                     <div class="text-box">
+                        <span class="card-title">Qiymət necə hesablanır?</span>
+                        <p class="card-description-italic">Hər yük üçün qiymət fərdi hesablanır. Əsas məqsəd: ən optimal
+                            marşrutla sabit və aydın xidmət.</p>
+                    </div>
+                </div>
 
-                        <span class="card-title">Etibarlı daşınma, aydın kommunikasiya:</span>
+                <div class="section-info grid-item">
 
-                        <p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
-                                    fill="#29D045" />
-                                <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                            <span class="card-description-bold">Məişət texnikası və Elektronika (Qazaxıstan).</span>
+                    <div class="section-info-title">Qiymət amilləri</div>
+
+                    <div class="text-box">
+                        <p class="section-info-description">
+                            <b>Yük növü və kateqoriya:</b> Standart, həssas, tez xarab olan, dəyərli və s.
+                        </p>
+                    </div>
+
+                    <div class="text-box">
+                        <p class="section-info-description">
+                            <b>Çəki və həcm:</b> Yükün ölçüsünə görə tariflər dəyişir.
+                        </p>
+                    </div>
+
+                    <div class="text-box">
+                        <p class="section-info-description">
+                            <b>Marşrut və təcillik:</b> Sürətli çatdırılma daha yüksək xərc tələb edə bilər.
+                        </p>
+                    </div>
+
+                    <div class="text-box">
+                        <p class="section-info-description">
+                            <b>Gömrük rəsmiləşdirilməsi:</b> Sənədləşmə və əlavə prosedurlar qiymətə təsir edir.
+                        </p>
+                    </div>
+
+                    <div class="text-box">
+                        <p class="section-info-description">
+                            <b>Əlavə xidmətlər:</b> Sığorta, qablaşdırma, qapıya çatdırılma və s.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="section-info grid-item">
+                    <span class="section-info-title">Yük həcm növləri: LCL / FCL, LTL / FTL</span>
+
+                    <div class="text-box">
+                        <p class="section-ifo-description">
+                            <b>LCL (Less than Container Load)</b> <br>
+                            Konteyneri tam doldurmayan yüklər üçün — digər yüklərlə birlikdə göndərilir.
+                        </p>
+                    </div>
+
+                    <div class="text-box">
+                        <p class="section-ifo-description">
+                            <b>FCL (Full Container Load)</b> <br>
+                            Bütün konteyner sizin yükünüz üçün ayrılır — həcm böyük olanda daha sərfəli olur.
+                        </p>
+                    </div>
+
+                    <div class="text-box">
+                        <p class="section-ifo-description">
+                            <b>LTL (Less than Truckload)</b> <br>
+                            Maşını tam doldurmayan yüklər üçün — bir neçə göndəriş birləşdirilə bilər.
+                        </p>
+                    </div>
+
+                    <div class="text-box">
+                        <p class="section-ifo-description">
+                            <b>FTL (Full Truckload)</b> <br>
+                            Bütün maşın sizin yük üçün — birbaşa və daha çevik çatdırılma.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- price factors end -->
+
+            <!-- contact us section start -->
+            <div class="contact-card">
+                <div class="section-body">
+                    <div class="section-intro">
+                        <span class="section-title-white">Ready to Move Your Business Forward?</span>
+                        <p class="section-description-white">Whether you’re refining your strategy or planning your next
+                            big
+                            move, our team is here to help. Let’s turn your goals into clear actions and measurable
+                            results.
                         </p>
 
-                        <p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
-                                    fill="#29D045" />
-                                <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                            <span class="card-description-bold">Mərhələ-mərhələ izləmə və məlumatlandırma</span>
-
-                        </p>
-
-                        <p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
-                                    fill="#29D045" />
-                                <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-
-                            <span class="card-description-bold">Gömrük rəsmiləşdirilməsində dəstək</span>
-
-                        </p>
-
-                        <p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
-                                    fill="#29D045" />
-                                <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-
-                            <span class="card-description-bold">Sığorta, qablaşdırma və qapıya çatdırılma
-                                opsiyaları</span>
-
-                        </p>
-
+                        <div class="intro-actions">
+                            <a href="#" class="btn-white">Send a request</a>
+                            <a href="#" class="whatsapp-button">
+                                <img src="assets/icons/wp-icon.png" alt="">
+                                <span>Write us on Whatsapp</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="section-image">
+                        <img src="assets/images/contact-us-section-img.jpg" alt="">
                     </div>
                 </div>
-
             </div>
+            <!-- contact us section end -->
 
         </div>
-        <!-- our partner end -->
-
-        <!-- transportation options start -->
-        <div class="transportation-options">
-
-            <div class="section-header">
-                <span class="section-title">Çin → Azərbaycan daşınma variantları</span>
-                <span class="section-header-info">Yükünüz üçün ən uyğun kombinasiya seçilir.</span>
-            </div>
-
-            <div class="section-body">
-
-                <div class="image-card">
-
-                    <img src="assets/images/logistic-img.jpg" alt="">
-
-                    <div class="text-box">
-
-                        <span class="card-title">Dəniz daşımaları</span>
-                        <p class="card-description-italic">Böyük və təcili olmayan yüklər üçün ən sərfəli seçim</p>
-
-                        <div class="features">
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
-                                        fill="#29D045" />
-                                    <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                                <span class="card-description-bold">FCL & LCL formatları</span>
-                            </p>
-
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
-                                        fill="#29D045" />
-                                    <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                                <span class="card-description-bold">Ən aşağı xərc</span>
-                            </p>
-
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
-                                        fill="#29D045" />
-                                    <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                                <span class="card-description-bold">Stabil marşrut planlaması</span>
-                            </p>
-                        </div>
-
-                        <div class="parameters">
-
-                            <div class="parameter">
-                                <span><b>Müddət:</b> 35–60 gün</span>
-                            </div>
-
-                            <div class="parameter">
-                                <span><b>Uyğun:</b> Həcmli yüklər</span>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-                <div class="image-card">
-
-                    <img src="assets/images/train.jpg" alt="">
-
-                    <div class="text-box">
-
-                        <span class="card-title">Dəmir yolu</span>
-                        <p class="card-description-italic">Sürət və qiymət balansı — daha proqnozlaşdırıla bilən
-                            çatdırılma</p>
-
-                        <div class="features">
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
-                                        fill="#29D045" />
-                                    <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                                <span class="card-description-bold">Mərkəzi Asiya & Xəzər xətti</span>
-                            </p>
-
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
-                                        fill="#29D045" />
-                                    <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                                <span class="card-description-bold">Stabil qrafik</span>
-                            </p>
-
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
-                                        fill="#29D045" />
-                                    <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                                <span class="card-description-bold">Orta xərc</span>
-                            </p>
-                        </div>
-
-                        <div class="parameters">
-
-                            <div class="parameter">
-                                <span><b>Müddət:</b> 12-25 gün</span>
-                            </div>
-
-                            <div class="parameter">
-                                <span><b>Uyğun:</b> Planlı idxal</span>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-                <div class="image-card">
-
-                    <img src="assets/images/train.jpg" alt="">
-
-                    <div class="text-box">
-
-                        <span class="card-title">Avtomobil</span>
-                        <p class="card-description-italic">Qapıdan-qapıya çevik logistika və marşrut elastikliyi</p>
-
-                        <div class="features">
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
-                                        fill="#29D045" />
-                                    <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                                <span class="card-description-bold">Door-to-door</span>
-                            </p>
-
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
-                                        fill="#29D045" />
-                                    <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                                <span class="card-description-bold">Çevik marşrut</span>
-                            </p>
-
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
-                                        fill="#29D045" />
-                                    <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                                <span class="card-description-bold">LTL & FTL seçimləri</span>
-                            </p>
-                        </div>
-
-                        <div class="parameters">
-
-                            <div class="parameter">
-                                <span><b>Müddət:</b> 15-30 gün</span>
-                            </div>
-
-                            <div class="parameter">
-                                <span><b>Uyğun:</b> Elastik çatdırılma</span>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-                <div class="image-card">
-
-                    <img src="assets/images/plane.jpg" alt="">
-
-                    <div class="text-box">
-
-                        <span class="card-title">Hava daşımaları</span>
-                        <p class="card-description-italic">Ən sürətli seçim — təcili və yüksək dəyərli yüklər üçün</p>
-
-                        <div class="features">
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
-                                        fill="#29D045" />
-                                    <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                                <span class="card-description-bold">5–10 gün</span>
-                            </p>
-
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
-                                        fill="#29D045" />
-                                    <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                                <span class="card-description-bold">Təcili və dəyərli yüklər</span>
-                            </p>
-
-                            <p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12C21 16.971 16.971 21 12 21Z"
-                                        fill="#29D045" />
-                                    <path d="M16 10L11 15L8 12" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                                <span class="card-description-bold">Daha yüksək xərc</span>
-                            </p>
-                        </div>
-
-                        <div class="parameters">
-
-                            <div class="parameter">
-                                <span><b>Müddət:</b> 5-10 gün</span>
-                            </div>
-
-                            <div class="parameter">
-                                <span><b>Uyğun:</b> Təcili göndəriş</span>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-        <!-- transportation options end -->
-
-        <!-- choose option start -->
-        <div class="choose-option">
-
-            <div class="section-header">
-                <span class="section-title">Hansı üsul sizə uyğundur?</span>
-                <span class="section-header-info">Vaxt, büdcə və yük növünə görə seçim edin.</span>
-            </div>
-
-            <div class="section-body">
-                <table class="transportation-options-table">
-
-                    <thead>
-                        <tr>
-                            <th scope="col">Növ</th>
-                            <th scope="col">Çatdırılma müddəti</th>
-                            <th scope="col">Qiymət səviyyəsi</th>
-                            <th scope="col">Ən uyğun</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>
-
-                                <div class="transportation-type">
-                                    <div class="icon">
-                                        <img src="assets/icons/ship.svg" alt="">
-                                    </div>
-
-                                    <span>Dəniz daşımaları</span>
-                                </div>
-
-                            </td>
-                            <td>35–60 gün</td>
-                            <td>Aşağı</td>
-                            <td>Böyük və təcili olmayan yüklər</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="transportation-type">
-                                    <div class="icon">
-                                        <img src="assets/icons/train.svg" alt="">
-                                    </div>
-
-                                    <span>Dəmir yolu</span>
-                                </div>
-                            </td>
-                            <td>12–25 gün</td>
-                            <td>Orta</td>
-                            <td>Sürət–qiymət balansı, stabil qrafik</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="transportation-type">
-                                    <div class="icon">
-                                        <img src="assets/icons/car.svg" alt="">
-                                    </div>
-
-                                    <span>Avtomobil</span>
-                                </div>
-                            </td>
-                            <td>15–30 gün</td>
-                            <td>Orta</td>
-                            <td>Qapıdan-qapıya, çevik marşrut</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="transportation-type">
-                                    <div class="icon">
-                                        <img src="assets/icons/plane.svg" alt="">
-                                    </div>
-
-                                    <span>Hava daşımaları</span>
-                                </div>
-                            </td>
-                            <td>5–10 gün</td>
-                            <td>Yüksək</td>
-                            <td>Təcili, dəyərli və ya tez xarab olan yüklər</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="transportation-type">
-                                    <div class="icon">
-                                        <img src="assets/icons/user.svg" alt="">
-                                    </div>
-
-                                    <span>Tələbdən asılı</span>
-                                </div>
-                            </td>
-                            <td>Tələbdən asılı</td>
-                            <td>Dəyişkən</td>
-                            <td>Fərdi həllər və kompleks marşrutlar</td>
-                        </tr>
-                    </tbody>
-
-                </table>
-                <span class="warning">*Multimodal həllər marşrut və yük xüsusiyyətlərinə görə fərdiləşdirilir.</span>
-            </div>
-
-        </div>
-        <!-- choose option end -->
-
-        <!-- price factors start -->
-        <div class="price-factors grid-container">
-
-            <div class="image-card grid-item">
-                <img src="assets/images/price-factors.jpg" alt="">
-
-                <div class="card-badget">
-                    <span>Qiymət amilləri</span>
-                </div>
-
-                <div class="text-box">
-                    <span class="card-title">Qiymət necə hesablanır?</span>
-                    <p class="card-description-italic">Hər yük üçün qiymət fərdi hesablanır. Əsas məqsəd: ən optimal
-                        marşrutla sabit və aydın xidmət.</p>
-                </div>
-            </div>
-
-            <div class="section-info grid-item">
-
-                <div class="section-info-title">Qiymət amilləri</div>
-
-                <div class="text-box">
-                    <p class="section-info-description">
-                        <b>Yük növü və kateqoriya:</b> Standart, həssas, tez xarab olan, dəyərli və s.
-                    </p>
-                </div>
-
-                <div class="text-box">
-                    <p class="section-info-description">
-                        <b>Çəki və həcm:</b> Yükün ölçüsünə görə tariflər dəyişir.
-                    </p>
-                </div>
-
-                <div class="text-box">
-                    <p class="section-info-description">
-                        <b>Marşrut və təcillik:</b> Sürətli çatdırılma daha yüksək xərc tələb edə bilər.
-                    </p>
-                </div>
-
-                <div class="text-box">
-                    <p class="section-info-description">
-                        <b>Gömrük rəsmiləşdirilməsi:</b> Sənədləşmə və əlavə prosedurlar qiymətə təsir edir.
-                    </p>
-                </div>
-
-                <div class="text-box">
-                    <p class="section-info-description">
-                        <b>Əlavə xidmətlər:</b> Sığorta, qablaşdırma, qapıya çatdırılma və s.
-                    </p>
-                </div>
-            </div>
-
-            <div class="section-info grid-item">
-                <span class="section-info-title">Yük həcm növləri: LCL / FCL, LTL / FTL</span>
-
-                <div class="text-box">
-                    <p class="section-ifo-description">
-                        <b>LCL (Less than Container Load)</b> <br>
-                        Konteyneri tam doldurmayan yüklər üçün — digər yüklərlə birlikdə göndərilir.
-                    </p>
-                </div>
-
-                <div class="text-box">
-                    <p class="section-ifo-description">
-                        <b>FCL (Full Container Load)</b> <br>
-                        Bütün konteyner sizin yükünüz üçün ayrılır — həcm böyük olanda daha sərfəli olur.
-                    </p>
-                </div>
-
-                <div class="text-box">
-                    <p class="section-ifo-description">
-                        <b>LTL (Less than Truckload)</b> <br>
-                        Maşını tam doldurmayan yüklər üçün — bir neçə göndəriş birləşdirilə bilər.
-                    </p>
-                </div>
-
-                <div class="text-box">
-                    <p class="section-ifo-description">
-                        <b>FTL (Full Truckload)</b> <br>
-                        Bütün maşın sizin yük üçün — birbaşa və daha çevik çatdırılma.
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-        <!-- price factors end -->
-
-        <!-- contact us section start -->
-        <div class="contact-card">
-            <div class="section-body">
-                <div class="section-intro">
-                    <span class="section-title-white">Ready to Move Your Business Forward?</span>
-                    <p class="section-description-white">Whether you’re refining your strategy or planning your next big
-                        move, our team is here to help. Let’s turn your goals into clear actions and measurable results.
-                    </p>
-
-                    <div class="intro-actions">
-                        <a href="#" class="btn-white">Send a request</a>
-                        <a href="#" class="whatsapp-button">
-                            <img src="assets/icons/wp-icon.png" alt="">
-                            <span>Write us on Whatsapp</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="section-image">
-                    <img src="assets/images/contact-us-section-img.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        <!-- contact us section end -->
+        <!-- page end -->
 
         <!-- footer start -->
         <footer>
@@ -751,6 +772,8 @@
         <!-- footer end -->
 
     </div>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">

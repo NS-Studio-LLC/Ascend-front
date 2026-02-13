@@ -1,23 +1,6 @@
+@use '../abstracts/mixins' as *;
+
 .logistics-page-container {
-    padding: 16px;
-
-    .logistics-head {
-        padding: 24px 50px 32px 50px;
-        border-radius: 16px;
-        background: #1B344D;
-        background: url('/assets/images/logistics-hero.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-
-        .hero {
-            margin-top: 70px;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            width: 60%;
-        }
-    }
 
     .our-partner {
         padding: 100px 50px;
@@ -25,10 +8,18 @@
         flex-direction: column;
         gap: 32px;
 
+        @include mq(tablet-portrait-up) {
+            padding: 50px 0 0 0;
+        }
+
         .section-body {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 16px;
+
+            @include mq(tablet-portrait-up) {
+                grid-template-columns: repeat(1, 1fr);
+            }
         }
 
     }
@@ -39,16 +30,29 @@
         flex-direction: column;
         gap: 32px;
 
+        @include mq(tablet-portrait-up) {
+            padding: 50px 0;
+        }
+
         .section-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            @include mq(tablet-portrait-up) {
+                flex-direction: column;
+                gap: 16px;
+            }
         }
 
         .section-body {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 16px;
+
+            @include mq(tablet-portrait-up) {
+                grid-template-columns: repeat(1, 1fr);
+            }
         }
 
     }
@@ -59,13 +63,29 @@
         flex-direction: column;
         gap: 32px;
 
+        @include mq(tablet-portrait-up) {
+            padding: 0 0 50px 0;
+        }
+
         .section-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            @include mq(tablet-portrait-up) {
+                flex-direction: column;
+                gap: 16px;
+            }
         }
 
         .section-body {
+
+
+            .table-div {
+                border-radius: 16px;
+                overflow: hidden;
+                border: 1px solid #dedede;
+            }
 
             .warning {
                 color: rgba(0, 0, 0, 0.50);
@@ -83,6 +103,11 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
+
+        @include mq(tablet-portrait-up) {
+            grid-template-columns: repeat(1, 1fr);
+            padding: 0 0 50px 0;
+        }
 
         >.grid-item:nth-child(3) {
             grid-column: 1 / -1;

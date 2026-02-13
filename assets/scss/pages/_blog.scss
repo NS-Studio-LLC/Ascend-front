@@ -1,25 +1,19 @@
+@use '../abstracts/mixins' as *;
+
 .blog-page-container {
-    padding: 16px;
 
-    .blog-head {
-        padding: 24px 50px 32px 50px;
-        border-radius: 16px;
-        background: #1B344D;
-
-        .hero {
-            margin-top: 70px;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            width: 60%;
-        }
-    }
-
-    .blogs-container{
+    .blogs-container {
         padding: 50px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 16px;
         row-gap: 32px;
+
+        @include mq(tablet-portrait-up) {
+            padding: 50px 0;
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+
     }
 }
