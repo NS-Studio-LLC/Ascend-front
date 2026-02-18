@@ -7,6 +7,14 @@ body {
     font-family: "Inter", sans-serif;
 }
 
+.modal-backdrop {
+    z-index: -1;
+}
+
+.modal {
+    z-index: 9999 !important;
+}
+
 .page-container {
     padding: 16px;
 }
