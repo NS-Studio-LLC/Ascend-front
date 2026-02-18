@@ -1447,7 +1447,7 @@ footer .footer-bottom .bottom-actions a {
 }
 
 .homepage-container .page-head-image {
-  background-image: url("/assets/images/homepage-hero.png");
+  background-image: url("../images/homepage-hero.png");
 }
 .homepage-container .page-head-image img {
   -o-object-fit: cover;
