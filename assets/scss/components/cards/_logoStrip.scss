@@ -1,60 +1,52 @@
-@use '../../abstracts/mixins' as *;
-
 .logo-strip {
-    display: flex;
-    flex-direction: column;
-    gap: 42px;
-
-    .track {
-        --s: 200px;
-        --d: 8s;
-        --n: 10;
-        
-        display: flex;
-        gap: 18px;
-        overflow: hidden;
-
-        .logo-div {
-            offset: shape(from calc(var(--s) / -2) 50%,
-                    hline by calc(sibling-count() * max(100% / var(--n), var(--s) + 10px)));
-            animation: x var(--d) linear infinite calc(-1 * sibling-index() * var(--d) / sibling-count());
-            animation-play-state: running;
-
-            img {
-                object-fit: contain;
-                width: 100%;
-                height: 100%;
-            }
-
-        }
-
-
-        &:hover .logo-div {
-            animation-play-state: paused;
-        }
-
-        &:nth-child(2) img {
-            animation-name: x-reverse;
-        }
-    }
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
 }
 
-@keyframes x {
-    0% {
-        offset-distance: 0%;
-    }
+.track {
+  --gap: 18px;
+  --speed: 18s; // default (JS data-speed ilə override olacaq)
 
-    100% {
-        offset-distance: 100%;
-    }
+  display: flex;
+  gap: var(--gap);
+  overflow: hidden;
+  align-items: center;
+  will-change: transform;
+
+  /* ✅ loop üçün */
+  animation: marquee var(--speed) linear infinite;
 }
 
-@keyframes x-reverse {
-    0% {
-        offset-distance: 100%;
-    }
+.track:hover {
+  animation-play-state: paused;
+}
 
-    100% {
-        offset-distance: 0%;
-    }
+/* ✅ logo-div stabil */
+.logo-div {
+  flex: 0 0 auto;
+  padding: 13px 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-img {
+  width: 125px;
+  height: 35px;
+  display: block;
+  flex: 0 0 auto;
+}
+
+.logo-img img {
+  width: 125px;
+  height: 35px;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(-1 * var(--loop-width, 0px))); }
 }
