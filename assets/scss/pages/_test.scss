@@ -1,21 +1,33 @@
 .test-container {
-    .cards-grid {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 20px;
+
+    .certificates__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 56px;
+        flex-wrap: wrap;
+        background-color: red;
     }
 
-    .card-item{
+    .cert {
+        width: 210px;
+        height: 210px;
+        border-radius: 50%;
+        background: #f3f4f6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        text-decoration: none;
         background-color: green;
-    }
 
-    .cards-grid>.card-item {
-        grid-column: span 2; // default: 2-ci sətirdə 3 kart üçün ideal
-    }
-
-    /* ilk 2 kart 1-ci sətirdə 2 ədəd olsun */
-    .cards-grid>.card-item:nth-child(-n + 2) {
-        grid-column: span 3;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            margin-top: 100px;
+        }
     }
 
 }

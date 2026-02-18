@@ -29,7 +29,7 @@
                 align-items: center;
                 transition: all 0.2s ease-in;
 
-                &:hover{
+                &:hover {
                     transform: scale(1.01);
                 }
 
@@ -39,6 +39,11 @@
                     font-style: normal;
                     font-weight: 500;
                     line-height: normal;
+                }
+
+                img {
+                    width: 24px;
+                    height: 24px;
                 }
             }
         }

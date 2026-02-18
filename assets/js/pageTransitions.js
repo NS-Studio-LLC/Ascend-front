@@ -1,6 +1,6 @@
 const view = document.querySelector("#view");
-const DURATION = 1000;  // animasiyanın öz müddəti (CSS ilə eyni)
-const DELAY_MS = 800;   // view-delay olanda tətbiq olunacaq gecikmə
+const DURATION = 1000;
+const DELAY_MS = 800;
 let isTransitioning = false;
 
 const nextFrame = () => new Promise((r) => requestAnimationFrame(() => r()));
@@ -55,7 +55,6 @@ function cleanupStrayLayers() {
   });
 }
 
-/* ✅ animated-head real height -> targetPx animasiyası (1 və ya çox element üçün) */
 async function shrinkAnimatedHeads(oldLayer, targetPx = 360) {
   const heads = oldLayer.querySelectorAll(".animated-head");
   if (!heads || heads.length === 0) return;
@@ -108,10 +107,8 @@ async function navigate(url, { push = true } = {}) {
 
   setViewHeightTo(oldLayer);
 
-  // ✅ animated-head olan hər yeri kiçilt
   shrinkAnimatedHeads(oldLayer, 360);
 
-  // yeni səhifəni gətir
   let html = "";
   try {
     const res = await fetch(url, { cache: "no-store" });

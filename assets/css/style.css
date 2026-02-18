@@ -1258,6 +1258,10 @@ footer .footer-bottom .bottom-actions a {
   font-weight: 500;
   line-height: normal;
 }
+.offcanvas-body .offcanvas-navs .nav-link img {
+  width: 24px;
+  height: 24px;
+}
 .offcanvas-body .offcanvas-actions {
   display: flex;
   align-items: center;
@@ -1275,6 +1279,25 @@ footer .footer-bottom .bottom-actions a {
   line-height: normal;
   padding: 12px;
   text-decoration: none;
+}
+
+.certificate-card {
+  width: 100%;
+  max-width: 309px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: #f3f4f6;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+.certificate-card img {
+  width: 70%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-top: 50px;
 }
 
 .transportation-options-table {
@@ -1722,14 +1745,21 @@ footer .footer-bottom .bottom-actions a {
   gap: 16px;
 }
 .about-us-page-container .our-team-section .section-body {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 @media only screen and (max-width: 768px) {
   .about-us-page-container .our-team-section .section-body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .about-us-page-container .our-team-section .section-body {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     gap: 16px;
   }
 }
@@ -1744,43 +1774,22 @@ footer .footer-bottom .bottom-actions a {
     padding: 0 0 50px 0;
   }
 }
-.about-us-page-container .certifications-section .section-body {
-  display: flex;
-  gap: 24px;
+.about-us-page-container .certifications-section .section-body .certificates {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 3vw, 56px);
+  align-items: center;
+  justify-items: center;
 }
 @media only screen and (max-width: 768px) {
-  .about-us-page-container .certifications-section .section-body {
-    display: grid;
+  .about-us-page-container .certifications-section .section-body .certificates {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 480px) {
+  .about-us-page-container .certifications-section .section-body .certificates {
     grid-template-columns: repeat(1, 1fr);
   }
-}
-.about-us-page-container .certifications-section .section-body .certificate-card {
-  border-radius: 300px;
-  background: #F4F5F6;
-  overflow: hidden;
-  height: 300px;
-  display: flex;
-  padding: 77px 39px 0 40px;
-  justify-content: center;
-  align-items: center;
-  flex: 1 0 0;
-}
-@media only screen and (max-width: 768px) {
-  .about-us-page-container .certifications-section .section-body .certificate-card {
-    border-radius: 50%;
-    height: auto;
-  }
-}
-.about-us-page-container .certifications-section .section-body .certificate-card .card-img {
-  width: 230px;
-  height: 311px;
-  margin-top: 70px;
-}
-.about-us-page-container .certifications-section .section-body .certificate-card .card-img img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
 .about-us-page-container .location-section {
   display: flex;
@@ -1971,7 +1980,7 @@ footer .footer-bottom .bottom-actions a {
 }
 
 .contact-us-page-container .page-head-image {
-  background: url("/assets/images/contact-hero.png");
+  background: url("../images/contact-hero.png");
 }
 
 .contact-us {
@@ -2135,20 +2144,31 @@ footer .footer-bottom .bottom-actions a {
   grid-column: 1/-1;
 }
 
-.test-container {
-  /* ilk 2 kart 1-ci sətirdə 2 ədəd olsun */
+.test-container .certificates__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+  flex-wrap: wrap;
+  background-color: red;
 }
-.test-container .cards-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 20px;
-}
-.test-container .card-item {
+.test-container .cert {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-decoration: none;
   background-color: green;
 }
-.test-container .cards-grid > .card-item {
-  grid-column: span 2;
-}
-.test-container .cards-grid > .card-item:nth-child(-n+2) {
-  grid-column: span 3;
+.test-container .cert img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+  margin-top: 100px;
 }/*# sourceMappingURL=style.css.map */
