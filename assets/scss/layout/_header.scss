@@ -4,13 +4,17 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    z-index: 9;
+    width: 90%;
 
     .logo-div {
         width: 106px;
-        height: 36px;
+        height: 32px;
+        padding: 0;
 
         img {
-            object-fit: contain;
+            object-fit: cover;
             width: 100%;
             height: 100%;
         }
@@ -127,6 +131,34 @@ header {
         @include mq(desktop-down) {
             display: none;
         }
+    }
+
+}
+
+.is-sticky {
+    top: 0;
+    backdrop-filter: blur(104px);
+    -webkit-backdrop-filter: blur(104px);
+
+    top: 0; // artıq səhifənin yuxarısında
+    background: rgba(255, 255, 255, 0.78); // ✅ ağ overlay -> ağ fonda oxunacaq
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    nav {
+        a {
+            color: #000;
+        }
+    }
+
+    .header-actions {
+        .btn-group {
+            .dropdown-toggle {
+                color: #000;
+            }
+        }
+
     }
 
 }
