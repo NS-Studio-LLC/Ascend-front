@@ -8,6 +8,10 @@ header {
     z-index: 9;
     width: 90%;
 
+    .logo-div-blured {
+        display: none;
+    }
+
     .logo-div {
         width: 106px;
         height: 32px;
@@ -145,6 +149,23 @@ header {
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    .logo-div-blured {
+        display: block;
+        width: 106px;
+        height: 32px;
+        padding: 0;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .logo-div {
+        display: none;
+    }
 
     nav {
         a {
