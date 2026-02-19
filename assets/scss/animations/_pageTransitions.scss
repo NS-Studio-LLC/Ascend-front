@@ -1,6 +1,9 @@
 #view {
   position: relative;
   isolation: isolate;
+
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 #view .layer {
@@ -39,4 +42,3 @@
 #view .animated-head.is-shrinking {
   transition: height 1000ms ease;
 }
-

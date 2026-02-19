@@ -3,24 +3,11 @@ const DURATION = 1000;
 const DELAY_MS = 800;
 let isTransitioning = false;
 
-const nextFrame = () => new Promise((r) => requestAnimationFrame(() => r()));
-const next2Frames = async () => {
-  await nextFrame();
-  await nextFrame();
-};
+const nextFrame = () => new Promise((r) => requestAnimationFrame(r));
+const next2Frames = async () => { await nextFrame(); await nextFrame(); };
 
 function getDelay() {
   return document.body.classList.contains("view-delay") ? DELAY_MS : 0;
-}
-
-function setViewHeightTo(el) {
-  if (!view || !el) return;
-  view.style.height = el.scrollHeight + "px";
-}
-
-function clearViewHeight() {
-  if (!view) return;
-  view.style.height = "auto";
 }
 
 function wrapInitialContentOnce() {
@@ -32,9 +19,7 @@ function wrapInitialContentOnce() {
 
   view.innerHTML = "";
   view.appendChild(old);
-
   view.dataset.layered = "1";
-  setViewHeightTo(old);
 
   return true;
 }
@@ -55,13 +40,15 @@ function cleanupStrayLayers() {
   });
 }
 
+/* ✅ Animated head shrink (səndəki kimi) */
 async function shrinkAnimatedHeads(oldLayer, targetPx = 360) {
   const heads = oldLayer.querySelectorAll(".animated-head");
   if (!heads || heads.length === 0) return;
 
-  heads.forEach(async (head) => {
+  // ⚠️ forEach(async) bəzən “parallel timing”də çaşdırır, for..of daha stabildir
+  for (const head of heads) {
     const from = head.scrollHeight;
-    if (from <= targetPx) return;
+    if (from <= targetPx) continue;
 
     head.style.height = from + "px";
     head.style.overflow = "hidden";
@@ -70,7 +57,7 @@ async function shrinkAnimatedHeads(oldLayer, targetPx = 360) {
 
     head.classList.add("is-shrinking");
     head.style.height = targetPx + "px";
-  });
+  }
 }
 
 function resetAnimatedHeadStyles(layer) {
@@ -82,6 +69,17 @@ function resetAnimatedHeadStyles(layer) {
     head.style.height = "";
     head.style.overflow = "";
   });
+}
+
+/* ✅ Bootstrap scroll lock qalırsa təmizlə */
+function unlockBodyScrollJustInCase() {
+  document.body.classList.remove("modal-open", "offcanvas-backdrop");
+  document.documentElement.style.overflow = "";
+  document.body.style.overflow = "";
+  document.body.style.position = "";
+  document.body.style.top = "";
+  document.body.style.width = "";
+  document.body.style.paddingRight = "";
 }
 
 async function navigate(url, { push = true } = {}) {
@@ -101,14 +99,12 @@ async function navigate(url, { push = true } = {}) {
     return;
   }
 
-  if (justWrapped) {
-    await next2Frames();
-  }
+  if (justWrapped) await next2Frames();
 
-  setViewHeightTo(oldLayer);
-
+  // ✅ shrink varsa başlat (animasiya startından əvvəl görünsün)
   shrinkAnimatedHeads(oldLayer, 360);
 
+  // yeni səhifəni gətir
   let html = "";
   try {
     const res = await fetch(url, { cache: "no-store" });
@@ -129,12 +125,13 @@ async function navigate(url, { push = true } = {}) {
     return;
   }
 
+  // yeni layer
   const newLayer = document.createElement("div");
   newLayer.className = "layer new";
   newLayer.innerHTML = nextView.innerHTML;
-  view.appendChild(newLayer);
 
-  setViewHeightTo(newLayer);
+  // normal axında əlavə et (scroll stabil qalsın)
+  view.appendChild(newLayer);
 
   document.title = nextTitle;
   if (push) history.pushState({}, "", url);
@@ -148,11 +145,25 @@ async function navigate(url, { push = true } = {}) {
       resetAnimatedHeadStyles(newLayer);
     }
 
-    clearViewHeight();
+    // ✅ animasiya rejimini bağla → layer artıq relative olur → scroll 100% stabil
+    view.classList.remove("is-animating");
+    view.style.height = ""; // varsa sil
+
+    // ✅ mobil scroll lock sığortası
+    unlockBodyScrollJustInCase();
+
     isTransitioning = false;
   };
 
   const startAnimation = () => {
+    // ✅ animasiya zamanı üst-üstə (absolute) rejimi aç
+    view.classList.add("is-animating");
+
+    // ✅ animasiya zamanı titrəməsin deyə qısa müddətlik height kilidlə
+    // (absolute rejimdə parent height collapse ola bilər)
+    const h = Math.max(oldLayer.scrollHeight, newLayer.scrollHeight);
+    view.style.height = h + "px";
+
     requestAnimationFrame(() => oldLayer.classList.add("is-leaving"));
     requestAnimationFrame(() => {
       requestAnimationFrame(() => newLayer.classList.add("is-entering"));
@@ -167,12 +178,13 @@ async function navigate(url, { push = true } = {}) {
   if (delay > 0) setTimeout(startAnimation, delay);
   else startAnimation();
 
+  // fallback
   setTimeout(() => {
     const stillOld = view.querySelector(".layer.old.is-leaving");
     const stillNew = view.querySelector(".layer.new.is-entering");
     if (stillOld || stillNew) finish();
     else isTransitioning = false;
-  }, delay + DURATION + 300);
+  }, delay + DURATION + 500);
 }
 
 // link intercept

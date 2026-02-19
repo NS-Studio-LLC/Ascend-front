@@ -1508,6 +1508,8 @@ footer .footer-bottom .bottom-actions a {
 #view {
   position: relative;
   isolation: isolate;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 #view .layer {
