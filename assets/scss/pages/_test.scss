@@ -1,33 +1,26 @@
 .test-container {
+    padding: 40px;
 
-    .certificates__wrap {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 56px;
-        flex-wrap: wrap;
-        background-color: red;
+    .hero {
+        position: relative;
+        overflow: hidden;
+        height: 546px;
     }
 
-    .cert {
-        width: 210px;
-        height: 210px;
-        border-radius: 50%;
-        background: #f3f4f6;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        text-decoration: none;
-        background-color: green;
+    .hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: 0;
+    }
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            display: block;
-            margin-top: 100px;
-        }
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        color: #fff;
     }
 
 }

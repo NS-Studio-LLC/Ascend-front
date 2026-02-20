@@ -91,6 +91,7 @@ header {
         display: flex;
         align-items: center;
         gap: 16px;
+        z-index: 9;
 
         @include mq(desktop-up) {
             display: none;
@@ -110,6 +111,16 @@ header {
                 font-weight: 500;
                 line-height: 140%;
 
+                --dot: 6px;
+                --gap: 6px;
+                --shift: calc(var(--dot) + var(--gap));
+
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+
+                padding-left: calc(12px + var(--shift));
+
                 &::after {
                     display: none;
                 }
@@ -119,12 +130,45 @@ header {
                 }
 
                 .circle {
-                    width: 6px;
-                    height: 6px;
+                    width: var(--dot);
+                    height: var(--dot);
                     border-radius: 50%;
-                    background-color: green;
+                    background: green;
+
+                    position: absolute;
+                    top: 50%;
+                    left: 12px;
+                    transform: translate(var(--shift), -50%);
+                    opacity: 0;
+
+                    transition: transform .35s ease, opacity .2s ease;
                 }
+
+                span {
+                    display: inline-block;
+                    transform: translateX(calc(var(--shift) * -1));
+                    transition: transform .35s ease;
+                }
+
+                &:hover {
+                    .circle {
+                        transform: translate(0, -50%);
+                        opacity: 1;
+                    }
+
+                    span {
+                        transform: translateX(0);
+                    }
+                }
+
+
             }
+
+            .dropdown-menu {
+                z-index: 9;
+            }
+
+
 
         }
 

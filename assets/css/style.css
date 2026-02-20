@@ -213,6 +213,7 @@ header .header-actions {
   display: flex;
   align-items: center;
   gap: 16px;
+  z-index: 9;
 }
 @media only screen and (max-width: 1200px) {
   header .header-actions {
@@ -229,6 +230,13 @@ header .header-actions .btn-group .dropdown-toggle {
   font-style: normal;
   font-weight: 500;
   line-height: 140%;
+  --dot: 6px;
+  --gap: 6px;
+  --shift: calc(var(--dot) + var(--gap));
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding-left: calc(12px + var(--shift));
 }
 header .header-actions .btn-group .dropdown-toggle::after {
   display: none;
@@ -237,10 +245,31 @@ header .header-actions .btn-group .dropdown-toggle:focus {
   border: none;
 }
 header .header-actions .btn-group .dropdown-toggle .circle {
-  width: 6px;
-  height: 6px;
+  width: var(--dot);
+  height: var(--dot);
   border-radius: 50%;
-  background-color: green;
+  background: green;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translate(var(--shift), -50%);
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.2s ease;
+}
+header .header-actions .btn-group .dropdown-toggle span {
+  display: inline-block;
+  transform: translateX(calc(var(--shift) * -1));
+  transition: transform 0.35s ease;
+}
+header .header-actions .btn-group .dropdown-toggle:hover .circle {
+  transform: translate(0, -50%);
+  opacity: 1;
+}
+header .header-actions .btn-group .dropdown-toggle:hover span {
+  transform: translateX(0);
+}
+header .header-actions .btn-group .dropdown-menu {
+  z-index: 9;
 }
 @media only screen and (min-width: 1200px) {
   header .menu-button {
@@ -424,7 +453,19 @@ footer .footer-bottom .bottom-actions a {
   height: 923px;
   padding: 24px 50px 32px 50px;
   border-radius: 16px;
-  background-color: red;
+  position: relative;
+  overflow: hidden;
+}
+.page-head-image .hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: 0;
 }
 @media only screen and (max-width: 768px) {
   .page-head-image {
@@ -433,10 +474,11 @@ footer .footer-bottom .bottom-actions a {
   }
 }
 .page-head-image .hero {
-  padding-top: 70px;
+  padding-top: 70px !important;
   display: flex;
   justify-content: space-between;
   gap: 50px;
+  z-index: 2;
 }
 @media only screen and (max-width: 768px) {
   .page-head-image .hero {
@@ -448,6 +490,7 @@ footer .footer-bottom .bottom-actions a {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  z-index: 2;
 }
 .page-head-image .hero .hero-intro .hero-description {
   color: #FFF;
@@ -489,6 +532,7 @@ footer .footer-bottom .bottom-actions a {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  z-index: 2;
 }
 @media only screen and (max-width: 768px) {
   .page-head-image .hero .hero-form {
@@ -1582,15 +1626,6 @@ footer .footer-bottom .bottom-actions a {
   transition: height 1000ms ease;
 }
 
-.homepage-container .page-head-image {
-  background-image: url("../images/homepage-hero.png");
-}
-.homepage-container .page-head-image img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
 .homepage-container .partners-section {
   padding: 100px 50px;
   display: flex;
@@ -2092,10 +2127,6 @@ footer .footer-bottom .bottom-actions a {
   }
 }
 
-.contact-us-page-container .page-head-image {
-  background: url("../images/contact-hero.png");
-}
-
 .contact-us {
   display: flex;
   flex-direction: column;
@@ -2257,31 +2288,27 @@ footer .footer-bottom .bottom-actions a {
   grid-column: 1/-1;
 }
 
-.test-container .certificates__wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 56px;
-  flex-wrap: wrap;
-  background-color: red;
+.test-container {
+  padding: 40px;
 }
-.test-container .cert {
-  width: 210px;
-  height: 210px;
-  border-radius: 50%;
-  background: #f3f4f6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.test-container .hero {
+  position: relative;
   overflow: hidden;
-  text-decoration: none;
-  background-color: green;
+  height: 546px;
 }
-.test-container .cert img {
+.test-container .hero-bg {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  display: block;
-  margin-top: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: 0;
+}
+.test-container .hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */
