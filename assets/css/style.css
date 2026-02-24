@@ -615,6 +615,10 @@ footer .footer-bottom .bottom-actions a {
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
+.page-head-image .hero .hero-form .tab-content .tab-pane .tab-wrapper .form > input[name=csrfmiddlewaretoken],
+.page-head-image .hero .hero-form .tab-content .tab-pane .tab-wrapper .form > input[name=_token] {
+  display: none !important;
+}
 .page-head-image .hero .hero-form .tab-content .tab-pane .tab-wrapper .form .form-grid-item:nth-child(n+3) {
   grid-column: 1/-1;
 }
