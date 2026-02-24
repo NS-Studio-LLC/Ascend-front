@@ -181,6 +181,11 @@ header {
         }
     }
 
+    .black-icon {
+        display: none;
+    }
+
+
 }
 
 .is-sticky {
@@ -193,6 +198,16 @@ header {
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    .black-icon {
+        display: inline;
+        width: 32px;
+        height: 32px;
+    }
+
+    .white-icon{
+        display: none;
+    }
 
     .logo-div-blured {
         display: block;

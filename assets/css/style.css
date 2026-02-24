@@ -276,6 +276,9 @@ header .header-actions .btn-group .dropdown-menu {
     display: none;
   }
 }
+header .black-icon {
+  display: none;
+}
 
 .is-sticky {
   top: 0;
@@ -286,6 +289,14 @@ header .header-actions .btn-group .dropdown-menu {
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+.is-sticky .black-icon {
+  display: inline;
+  width: 32px;
+  height: 32px;
+}
+.is-sticky .white-icon {
+  display: none;
 }
 .is-sticky .logo-div-blured {
   display: block;
@@ -823,7 +834,7 @@ footer .footer-bottom .bottom-actions a {
   margin-left: 16px;
   margin-right: 16px;
 }
-.image-card .text-box .card-description {
+.image-card .text-box .card-description-italic {
   color: rgba(0, 0, 0, 0.7);
   font-size: 14px;
   font-weight: 400;
@@ -835,10 +846,6 @@ footer .footer-bottom .bottom-actions a {
   -webkit-box-orient: vertical !important;
   -webkit-line-clamp: 3 !important;
   overflow: hidden !important;
-  color: red;
-}
-.image-card .text-box .card-description p {
-  margin: 0 !important;
 }
 .image-card .features {
   display: flex;
@@ -1083,7 +1090,7 @@ footer .footer-bottom .bottom-actions a {
 }
 
 .contact-card {
-  padding: 0 50px 100px 50px;
+  padding: 0 0px 100px 0px;
 }
 @media only screen and (max-width: 768px) {
   .contact-card {
@@ -1150,6 +1157,26 @@ footer .footer-bottom .bottom-actions a {
   font-style: normal;
   font-weight: 510;
   line-height: 140%;
+}
+.contact-card .section-body .section-intro .info-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-card .section-body .section-intro .info-div .label {
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+.contact-card .section-body .section-intro .info-div .value {
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
 }
 .contact-card .section-body .section-image {
   height: 355px;
@@ -1311,8 +1338,15 @@ footer .footer-bottom .bottom-actions a {
     transform: translateX(calc(-1 * var(--loop-width, 0px)));
   }
 }
+.offcanvas {
+  z-index: 9999;
+  min-height: 100vh;
+}
 .offcanvas-header {
   padding: 12px;
+}
+.offcanvas-header .logo-div {
+  display: block !important;
 }
 .offcanvas-header .logo-div img {
   -o-object-fit: cover;
@@ -2020,20 +2054,20 @@ footer .footer-bottom .bottom-actions a {
 .cases-page-container .our-cases .section-body .case-part .customer-review-section .section-body .customer-review {
   width: 100%;
 }
-.cases-page-container .our-cases .section-body .case-two {
+.cases-page-container .our-cases .section-body:nth-child(2) {
   padding-top: 100px;
 }
 @media only screen and (max-width: 768px) {
-  .cases-page-container .our-cases .section-body .case-two {
+  .cases-page-container .our-cases .section-body:nth-child(2) {
     padding-top: 50px;
   }
 }
-.cases-page-container .our-cases .section-body .case-three {
+.cases-page-container .our-cases .section-body:nth-child(3) {
   padding-top: 100px;
   padding-bottom: 100px;
 }
 @media only screen and (max-width: 768px) {
-  .cases-page-container .our-cases .section-body .case-three {
+  .cases-page-container .our-cases .section-body:nth-child(3) {
     padding-top: 50px;
     padding-bottom: 0px;
   }
@@ -2133,56 +2167,8 @@ footer .footer-bottom .bottom-actions a {
   gap: 32px;
   padding: 50px;
 }
-.contact-us .contact-us-section .section-body {
-  border-radius: 12px;
-  background: #16293A;
-  padding: 16px;
-  display: flex;
-  gap: 24px;
-}
-.contact-us .contact-us-section .section-body .section-intro {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  justify-content: flex-end;
-  width: 50%;
-}
-.contact-us .contact-us-section .section-body .section-intro .intro-actions {
-  margin-top: 12px;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-.contact-us .contact-us-section .section-body .section-intro .intro-actions .whatsapp-button {
-  padding: 12px;
-  border-radius: 6px;
-  background: #29D045;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.contact-us .contact-us-section .section-body .section-intro .intro-actions .whatsapp-button img {
-  width: 20px;
-  height: 20px;
-}
-.contact-us .contact-us-section .section-body .section-intro .intro-actions .whatsapp-button span {
-  color: #FFF;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 510;
-  line-height: 140%;
-}
-.contact-us .contact-us-section .section-body .section-image {
-  height: 355px;
-  width: 50%;
-  border-radius: 12px;
-  overflow: hidden;
-}
-.contact-us .contact-us-section .section-body .section-image img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
+.contact-us .contact-card .section-intro {
+  justify-content: space-between;
 }
 
 .logistics-page-container .our-partner {

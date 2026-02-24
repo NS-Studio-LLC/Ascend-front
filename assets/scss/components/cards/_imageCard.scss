@@ -37,7 +37,7 @@
         margin-left: 16px;
         margin-right: 16px;
 
-        .card-description {
+        .card-description-italic {
             color: rgba(0, 0, 0, 0.70);
             font-size: 14px;
             font-weight: 400;
@@ -50,11 +50,7 @@
             -webkit-box-orient: vertical !important;
             -webkit-line-clamp: 3 !important;
             overflow: hidden !important;
-            color: red;
 
-            p{
-                margin: 0 !important;
-            }
         }
 
     }
@@ -88,23 +84,6 @@
     .a {
         background-color: red;
     }
-
-    // .card-description-italic {
-    //     color: rgba(0, 0, 0, 0.70);
-    //     font-size: 14px;
-    //     font-style: italic;
-    //     font-weight: 400;
-    //     line-height: 140%;
-    //     display: flex;
-    //     align-items: flex-start;
-    //     gap: 8px;
-
-    //     display: -webkit-box;
-    //     -webkit-box-orient: vertical;
-    //     -webkit-line-clamp: 3;
-    //     overflow: hidden;
-
-    // }
 
     // .card-description {
     //     color: rgba(0, 0, 0, 0.70);

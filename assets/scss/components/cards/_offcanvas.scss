@@ -1,9 +1,13 @@
 .offcanvas {
 
+    z-index: 9999;
+    min-height: 100vh;
+
     &-header {
         padding: 12px;
 
         .logo-div {
+            display: block !important;
 
             img {
                 object-fit: cover;
