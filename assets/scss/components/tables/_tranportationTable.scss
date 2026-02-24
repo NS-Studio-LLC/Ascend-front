@@ -29,7 +29,7 @@
 
             &:nth-child(odd) {
                 border-bottom: 1px solid #D1D1D1;
-                background: var(--surface-background-background, #FFF);
+                background: #FFF;
             }
 
             td {
@@ -51,7 +51,7 @@
                         padding: 12px;
                         border-radius: 12px;
                         border: 1px solid #ECECEC;
-                        background: var(--surface-background-surface, #F9F9F9);
+                        background:#F9F9F9;
                     }
 
                     span {

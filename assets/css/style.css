@@ -588,7 +588,7 @@ footer .footer-bottom .bottom-actions a {
   }
 }
 .page-head-image .hero .hero-form .form-nav .nav-pills .nav-item .nav-link {
-  color: var(--neutral-colors-black, #010203);
+  color: #010203;
   text-align: center;
   font-size: 14px;
   font-style: normal;
@@ -631,7 +631,7 @@ footer .footer-bottom .bottom-actions a {
   margin-top: 8px;
 }
 .page-head-image .hero .hero-form .tab-content .tab-pane .tab-wrapper .form-info {
-  color: var(--Black-01, #333);
+  color: #333;
   text-align: center;
   font-size: 14px;
   font-style: normal;
@@ -727,7 +727,7 @@ footer .footer-bottom .bottom-actions a {
   display: flex;
   align-items: center;
   gap: 2px;
-  color: var(--neutral-colors-black, #010203);
+  color: #010203;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -755,7 +755,7 @@ footer .footer-bottom .bottom-actions a {
   display: flex;
   align-items: center;
   gap: 2px;
-  color: var(--neutral-colors-black, #010203);
+  color: #010203;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -784,7 +784,7 @@ footer .footer-bottom .bottom-actions a {
   display: flex;
   align-items: center;
   gap: 2px;
-  color: var(--neutral-colors-black, #010203);
+  color: #010203;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -1444,7 +1444,7 @@ footer .footer-bottom .bottom-actions a {
 }
 .transportation-options-table tbody tr:nth-child(odd) {
   border-bottom: 1px solid #D1D1D1;
-  background: var(--surface-background-background, #FFF);
+  background: #FFF;
 }
 .transportation-options-table tbody tr td {
   padding: 12px 16px;
@@ -1465,7 +1465,7 @@ footer .footer-bottom .bottom-actions a {
   padding: 12px;
   border-radius: 12px;
   border: 1px solid #ECECEC;
-  background: var(--surface-background-surface, #F9F9F9);
+  background: #F9F9F9;
 }
 .transportation-options-table tbody tr td .transportation-type span {
   overflow: hidden;
