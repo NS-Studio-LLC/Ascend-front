@@ -161,13 +161,11 @@ header {
                     }
                 }
 
-
             }
 
             .dropdown-menu {
                 z-index: 9;
             }
-
 
 
         }
@@ -185,16 +183,16 @@ header {
         display: none;
     }
 
-
 }
 
 .is-sticky {
     top: 0;
     backdrop-filter: blur(104px);
     -webkit-backdrop-filter: blur(104px);
+    padding: 6px;
 
-    top: 0; // artıq səhifənin yuxarısında
-    background: rgba(255, 255, 255, 0.78); // ✅ ağ overlay -> ağ fonda oxunacaq
+    top: 0;
+    background: rgba(255, 255, 255, 0.78);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);

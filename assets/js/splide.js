@@ -2,12 +2,12 @@ new Splide('#logoStrip', {
   type: 'loop',
   arrows: false,
   pagination: false,
-  drag: false,          // istəsən true et
-  autoWidth: true,      // logo ölçüsünə görə yan-yana düzülür
+  drag: false,
+  autoWidth: true,
   gap: '18px',
   focus: 'center',
   autoScroll: {
-    speed: -1.2,         // artır = daha sürətli
+    speed: -1.2,
     pauseOnHover: true,
     pauseOnFocus: false,
   },

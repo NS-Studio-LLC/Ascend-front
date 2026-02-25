@@ -284,6 +284,7 @@ header .black-icon {
   top: 0;
   backdrop-filter: blur(104px);
   -webkit-backdrop-filter: blur(104px);
+  padding: 6px;
   top: 0;
   background: rgba(255, 255, 255, 0.78);
   backdrop-filter: blur(18px);
@@ -543,7 +544,7 @@ footer .footer-bottom .bottom-actions a {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  z-index: 2;
+  z-index: 1;
 }
 @media only screen and (max-width: 768px) {
   .page-head-image .hero .hero-form {
@@ -814,6 +815,11 @@ footer .footer-bottom .bottom-actions a {
   min-height: 387px;
   cursor: pointer;
 }
+.image-card .card-link-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
 .image-card:hover img {
   transform: scale(1.2);
 }
@@ -838,18 +844,19 @@ footer .footer-bottom .bottom-actions a {
   margin-left: 16px;
   margin-right: 16px;
 }
-.image-card .text-box .card-description-italic {
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 140%;
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
+.image-card .text-box p {
   display: -webkit-box !important;
   -webkit-box-orient: vertical !important;
   -webkit-line-clamp: 3 !important;
   overflow: hidden !important;
+  color: red !important;
+}
+.image-card .text-box .card-description {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  gap: 8px;
 }
 .image-card .features {
   display: flex;
@@ -872,9 +879,11 @@ footer .footer-bottom .bottom-actions a {
   font-style: normal;
   font-weight: 500;
   line-height: 120%;
-}
-.image-card .a {
-  background-color: red;
+  display: inline-block;
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .image-card .send-request {
   display: flex;
@@ -909,6 +918,8 @@ footer .footer-bottom .bottom-actions a {
   margin-right: 16px;
   width: -moz-fit-content;
   width: fit-content;
+  position: relative;
+  z-index: 3;
 }
 .image-card .card-badget span {
   color: #000;
@@ -920,11 +931,6 @@ footer .footer-bottom .bottom-actions a {
 .image-card .form-button {
   width: -moz-fit-content;
   width: fit-content;
-}
-.image-card p {
-  display: flex;
-  align-items: center;
-  gap: 2px;
 }
 
 .section-info {
@@ -1477,13 +1483,18 @@ footer .footer-bottom .bottom-actions a {
   line-height: 140%;
 }
 
+.send-request-modal {
+  background-color: #000;
+  opacity: 0.9;
+}
 .send-request-modal .modal-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
   padding: 16px;
-  z-index: 9999;
+  background-color: #fff;
+  opacity: 1;
 }
 .send-request-modal .modal-content .modal-image {
   background: url("/assets/images/modal-img.jpg");
@@ -1512,6 +1523,7 @@ footer .footer-bottom .bottom-actions a {
   flex-direction: column;
   align-items: center;
   gap: 6px;
+  background-color: #fff;
 }
 .send-request-modal .modal-content .modal-body .modal-title {
   display: flex;
@@ -1558,6 +1570,8 @@ footer .footer-bottom .bottom-actions a {
   gap: 16px;
   padding: 16px;
   z-index: 9999;
+  background-color: #000 !important;
+  opacity: 1 !important;
 }
 .certificate-modal .modal-content .modal-image {
   background-size: cover;
@@ -2276,6 +2290,33 @@ footer .footer-bottom .bottom-actions a {
 }
 .logistics-page-container .price-factors > .grid-item:nth-child(3) {
   grid-column: 1/-1;
+}
+
+.error-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 50px 50px;
+}
+.error-page-container img {
+  width: 72px;
+  height: 72px;
+}
+.error-page-container .error-message {
+  font-size: 32px;
+}
+.error-page-container .btn-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 12px;
+  border: 2px inset black;
+}
+.error-page-container .btn-back img {
+  width: 24px;
+  height: 24px;
 }
 
 .test-container {

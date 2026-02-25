@@ -9,6 +9,12 @@
     min-height: 387px;
     cursor: pointer;
 
+    .card-link-overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+    }
+
     &:hover {
         img {
             transform: scale(1.2);
@@ -37,20 +43,20 @@
         margin-left: 16px;
         margin-right: 16px;
 
-        .card-description-italic {
-            color: rgba(0, 0, 0, 0.70);
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 140%;
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-
+        p {
             display: -webkit-box !important;
             -webkit-box-orient: vertical !important;
             -webkit-line-clamp: 3 !important;
             overflow: hidden !important;
+            color: red !important;
+        }
 
+        .card-description {
+            color: rgba(0, 0, 0, 0.70);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 140%;
+            gap: 8px;
         }
 
     }
@@ -79,42 +85,12 @@
         font-style: normal;
         font-weight: 500;
         line-height: 120%;
+        display: inline-block;
+        text-overflow: ellipsis;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
     }
-
-    .a {
-        background-color: red;
-    }
-
-    // .card-description {
-    //     color: rgba(0, 0, 0, 0.70);
-    //     font-size: 14px;
-    //     font-style: normal;
-    //     font-weight: 400;
-    //     line-height: 140%;
-
-    //     display: -webkit-box;
-    //     -webkit-box-orient: vertical;
-    //     -webkit-line-clamp: 3;
-    //     overflow: hidden;
-
-    //     img {
-    //         width: 16px;
-    //         height: 16px;
-    //     }
-    // }
-
-    // .card-description-bold {
-    //     color: #000;
-    //     font-size: 16px;
-    //     font-style: normal;
-    //     font-weight: 500;
-    //     line-height: 140%;
-
-    //     display: -webkit-box;
-    //     -webkit-box-orient: vertical;
-    //     -webkit-line-clamp: 3;
-    //     overflow: hidden;
-    // }
 
     .send-request {
         display: flex;
@@ -150,6 +126,8 @@
         margin-left: 16px;
         margin-right: 16px;
         width: fit-content;
+        position: relative;
+        z-index: 3;
 
         span {
             color: #000;
@@ -164,9 +142,5 @@
         width: fit-content;
     }
 
-    p {
-        display: flex;
-        align-items: center;
-        gap: 2px;
-    }
+
 }

@@ -1,4 +1,9 @@
 .send-request-modal {
+    background-color: #000;
+    opacity: 0.9;
+
+    // .modal-dialog {
+    // }
 
     .modal-content {
         display: flex;
@@ -6,7 +11,8 @@
         align-items: center;
         gap: 16px;
         padding: 16px;
-        z-index: 9999;
+        background-color: #fff;
+        opacity: 1;
 
         .modal-image {
             background: url('/assets/images/modal-img.jpg');
@@ -37,6 +43,7 @@
             flex-direction: column;
             align-items: center;
             gap: 6px;
+            background-color: #fff;
 
             .modal-title {
                 display: flex;

@@ -40,12 +40,10 @@ function cleanupStrayLayers() {
   });
 }
 
-/* ✅ Animated head shrink (səndəki kimi) */
 async function shrinkAnimatedHeads(oldLayer, targetPx = 360) {
   const heads = oldLayer.querySelectorAll(".animated-head");
   if (!heads || heads.length === 0) return;
 
-  // ⚠️ forEach(async) bəzən “parallel timing”də çaşdırır, for..of daha stabildir
   for (const head of heads) {
     const from = head.scrollHeight;
     if (from <= targetPx) continue;
@@ -71,7 +69,6 @@ function resetAnimatedHeadStyles(layer) {
   });
 }
 
-/* ✅ Bootstrap scroll lock qalırsa təmizlə */
 function unlockBodyScrollJustInCase() {
   document.body.classList.remove("modal-open", "offcanvas-backdrop");
   document.documentElement.style.overflow = "";
@@ -101,10 +98,8 @@ async function navigate(url, { push = true } = {}) {
 
   if (justWrapped) await next2Frames();
 
-  // ✅ shrink varsa başlat (animasiya startından əvvəl görünsün)
   shrinkAnimatedHeads(oldLayer, 360);
 
-  // yeni səhifəni gətir
   let html = "";
   try {
     const res = await fetch(url, { cache: "no-store" });
@@ -125,12 +120,10 @@ async function navigate(url, { push = true } = {}) {
     return;
   }
 
-  // yeni layer
   const newLayer = document.createElement("div");
   newLayer.className = "layer new";
   newLayer.innerHTML = nextView.innerHTML;
 
-  // normal axında əlavə et (scroll stabil qalsın)
   view.appendChild(newLayer);
 
   document.title = nextTitle;
@@ -145,22 +138,17 @@ async function navigate(url, { push = true } = {}) {
       resetAnimatedHeadStyles(newLayer);
     }
 
-    // ✅ animasiya rejimini bağla → layer artıq relative olur → scroll 100% stabil
     view.classList.remove("is-animating");
-    view.style.height = ""; // varsa sil
+    view.style.height = "";
 
-    // ✅ mobil scroll lock sığortası
     unlockBodyScrollJustInCase();
 
     isTransitioning = false;
   };
 
   const startAnimation = () => {
-    // ✅ animasiya zamanı üst-üstə (absolute) rejimi aç
     view.classList.add("is-animating");
 
-    // ✅ animasiya zamanı titrəməsin deyə qısa müddətlik height kilidlə
-    // (absolute rejimdə parent height collapse ola bilər)
     const h = Math.max(oldLayer.scrollHeight, newLayer.scrollHeight);
     view.style.height = h + "px";
 
@@ -178,7 +166,6 @@ async function navigate(url, { push = true } = {}) {
   if (delay > 0) setTimeout(startAnimation, delay);
   else startAnimation();
 
-  // fallback
   setTimeout(() => {
     const stillOld = view.querySelector(".layer.old.is-leaving");
     const stillNew = view.querySelector(".layer.new.is-entering");
@@ -187,7 +174,6 @@ async function navigate(url, { push = true } = {}) {
   }, delay + DURATION + 500);
 }
 
-// link intercept
 document.addEventListener("click", (e) => {
   const a = e.target.closest("a");
   if (!a) return;
