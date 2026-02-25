@@ -6,7 +6,7 @@
 
 .track {
   --gap: 18px;
-  --speed: 18s; // default (JS data-speed ilə override olacaq)
+  --speed: 18s;
 
   display: flex;
   gap: var(--gap);
@@ -14,7 +14,6 @@
   align-items: center;
   will-change: transform;
 
-  /* ✅ loop üçün */
   animation: marquee var(--speed) linear infinite;
 }
 
@@ -22,13 +21,22 @@
   animation-play-state: paused;
 }
 
-/* ✅ logo-div stabil */
+.splide__slide {
+  width: 125px;
+  height: 35px;
+  overflow: hidden;
+
+  img {}
+}
+
 .logo-div {
   flex: 0 0 auto;
   padding: 13px 27px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 125px;
+  height: 35px;
 }
 
 .logo-img {
@@ -36,17 +44,24 @@
   height: 35px;
   display: block;
   flex: 0 0 auto;
+
+  img {
+    width: 125px;
+    height: 35px;
+    display: block;
+    object-fit: contain !important;
+    object-position: center;
+    overflow: hidden;
+  }
 }
 
-.logo-img img {
-  width: 125px;
-  height: 35px;
-  display: block;
-  object-fit: contain;
-  object-position: center;
-}
 
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(calc(-1 * var(--loop-width, 0px))); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-1 * var(--loop-width, 0px)));
+  }
 }

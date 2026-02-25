@@ -548,7 +548,6 @@ footer .footer-bottom .bottom-actions a {
   border-radius: 6px;
 }
 .page-head-image .hero .hero-form {
-  flex-wrap: 1;
   border-radius: 12px;
   border: 1px solid #E7E9ED;
   background: #FFF;
@@ -558,6 +557,7 @@ footer .footer-bottom .bottom-actions a {
   flex-direction: column;
   gap: 16px;
   z-index: 1;
+  width: 40%;
 }
 @media only screen and (max-width: 768px) {
   .page-head-image .hero .hero-form {
@@ -1317,7 +1317,6 @@ footer .footer-bottom .bottom-actions a {
   overflow: hidden;
   align-items: center;
   will-change: transform;
-  /* ✅ loop üçün */
   animation: marquee var(--speed) linear infinite;
 }
 
@@ -1325,13 +1324,19 @@ footer .footer-bottom .bottom-actions a {
   animation-play-state: paused;
 }
 
-/* ✅ logo-div stabil */
+.splide__slide {
+  width: 125px;
+  height: 35px;
+  overflow: hidden;
+}
 .logo-div {
   flex: 0 0 auto;
   padding: 13px 27px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 125px;
+  height: 35px;
 }
 
 .logo-img {
@@ -1340,15 +1345,15 @@ footer .footer-bottom .bottom-actions a {
   display: block;
   flex: 0 0 auto;
 }
-
 .logo-img img {
   width: 125px;
   height: 35px;
   display: block;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
   -o-object-position: center;
      object-position: center;
+  overflow: hidden;
 }
 
 @keyframes marquee {

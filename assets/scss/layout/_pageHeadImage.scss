@@ -106,7 +106,6 @@
         }
 
         .hero-form {
-            flex-wrap: 1;
             border-radius: 12px;
             border: 1px solid #E7E9ED;
             background: #FFF;
@@ -116,6 +115,7 @@
             flex-direction: column;
             gap: 16px;
             z-index: 1;
+            width: 40%;
 
             @include mq(tablet-portrait-up) {
                 width: 100%;
