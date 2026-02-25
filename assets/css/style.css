@@ -1325,35 +1325,31 @@ footer .footer-bottom .bottom-actions a {
 }
 
 .splide__slide {
-  width: 125px;
-  height: 35px;
   overflow: hidden;
 }
-.logo-div {
+.splide__slide .logo-div {
   flex: 0 0 auto;
   padding: 13px 27px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 125px;
-  height: 35px;
+  width: 150px;
+  height: 60px;
+}
+.splide__slide .logo-div img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+  overflow: hidden;
 }
 
 .logo-img {
-  width: 125px;
-  height: 35px;
+  width: 150px;
+  height: 60px;
   display: block;
   flex: 0 0 auto;
-}
-.logo-img img {
-  width: 125px;
-  height: 35px;
-  display: block;
-  -o-object-fit: contain !important;
-     object-fit: contain !important;
-  -o-object-position: center;
-     object-position: center;
-  overflow: hidden;
 }
 
 @keyframes marquee {
