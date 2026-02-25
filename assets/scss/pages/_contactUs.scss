@@ -8,5 +8,13 @@
         .section-intro{
             justify-content: space-between;
         }
+
+        .section-image{
+            background-color: green;
+
+            iframe{
+                width: 100% !important;
+            }
+        }
     }
 }

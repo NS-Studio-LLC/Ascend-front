@@ -2243,6 +2243,12 @@ body {
 .contact-us .contact-card .section-intro {
   justify-content: space-between;
 }
+.contact-us .contact-card .section-image {
+  background-color: green;
+}
+.contact-us .contact-card .section-image iframe {
+  width: 100% !important;
+}
 
 .logistics-page-container .our-partner {
   padding: 100px 50px;
