@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="view" class="view-delay">
+<body class="animation-delay">
 
     <div class="page-container">
 
@@ -40,11 +40,12 @@
                     <!-- nav start -->
                     <nav>
 
-                        <a href="index.html">
+
+                        <a href="index.html" target="_parent">
                             <div class="circle"></div>
                             <span>Ana Səhifə</span>
                         </a>
-                        <a href="aboutUs.html">
+                        <a href="aboutUs.html" target="_parent">
                             <div class="circle"></div>
                             <span>Haqqımızda</span>
                         </a>
@@ -779,7 +780,6 @@
 
                     <div class="image-card">
                         <img src="assets/images/card-img.jpg" alt="">
-                        <a href="#" class="card-link-overlay" aria-label="Open blog"></a>
 
                         <div class="card-badget">
                             <span>13.01.2025</span>
@@ -789,20 +789,9 @@
 
                             <span class="card-title">5 Steps to Build a Scalable Business Strategy</span>
 
-                            <p class="card-description" id="descFromEditor">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, beatae? Lorem ipsum
-                                dolor sit amet consectetur adipisicing elit. Quasi, asperiores? Lorem, ipsum dolor sit
-                                amet consectetur adipisicing elit. Quam, deleniti. Lorem ipsum dolor sit amet
-                                consectetur adipisicing elit. Magni quod dolorum quidem labore itaque? Perspiciatis iste
-                                iusto corrupti atque quisquam illum! Iusto tempora eos quia perspiciatis explicabo,
-                                accusamus adipisci minima laborum molestiae officiis aut, quibusdam ipsa. Enim quisquam
-                                pariatur exercitationem tempore sapiente ullam error eos animi officia soluta ea iste
-                                asperiores, dolores fuga earum, saepe quas accusamus laborum tenetur veritatis, minima
-                                fugit. Dolore adipisci officiis, delectus minima placeat blanditiis suscipit eligendi,
-                                dicta laborum est nostrum qui dolorem laudantium enim dolores nam consequatur, harum
-                                tempora. Quidem recusandae officiis repellendus sed rerum minus ea, modi magni, animi,
-                                perferendis obcaecati veniam architecto voluptatum!
-                            </p>
+                            <div class="card-description" id="descFromEditor">
+
+                            </div>
 
                         </div>
                     </div>
@@ -818,7 +807,7 @@
 
                             <span class="card-title">The Future of Business Consulting</span>
 
-                            <p class="card-description">From AI-driven insights to agile frameworks, businesses
+                            <p class="card-description-italic">From AI-driven insights to agile frameworks, businesses
                                 need
                                 to stay ahead of trends to remain competitive. Lorem ipsum dolor sit, amet consectetur
                                 adipisicing elit. Quia nulla nisi placeat possimus amet suscipit esse quos dolorem sed
@@ -845,7 +834,7 @@
 
                             <span class="card-title">How to Optimize Operations for Efficiency</span>
 
-                            <p class="card-description">In this article, we outline practical strategies for
+                            <p class="card-description-italic">In this article, we outline practical strategies for
                                 streamlining processes, reducing waste, and boosting productivity.</p>
 
                         </div>
@@ -1007,6 +996,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
     <script

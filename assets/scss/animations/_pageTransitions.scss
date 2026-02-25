@@ -1,43 +1,30 @@
-#view {
-  position: relative;
-  isolation: isolate;
-  touch-action: pan-y;
-  -webkit-overflow-scrolling: touch;
-}
-
-#view .layer {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-#view .layer.old {
-  z-index: 1;
+.page-container {
   opacity: 1;
-  transition: opacity 1s ease;
+  transition: opacity 0.55s ease;
+  transition-delay: 0s;
+  will-change: opacity;
 }
 
-#view .layer.old.is-leaving {
+body.is-page-entering .page-container {
+  opacity: 0;
+}
+
+body.is-page-leaving .page-container {
   opacity: 0;
   pointer-events: none;
 }
 
-#view .layer.new {
-  z-index: 2;
-  opacity: 0;
-  transition: opacity 1s ease;
+body.animation-delay.is-page-leaving .page-container {
+  transition-delay: 0.65s;
 }
 
-#view .layer.new.is-entering {
-  opacity: 1;
+html,
+body {
+  background: #ffffff; 
 }
 
-#view .animated-head {
-  overflow: hidden;
-  will-change: height;
-}
-
-#view .animated-head.is-shrinking {
-  transition: height 1000ms ease;
+@media (prefers-reduced-motion: reduce) {
+  .page-container {
+    transition: opacity 0.2s ease !important;
+  }
 }
