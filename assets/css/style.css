@@ -2371,26 +2371,4 @@ body {
 .error-page-container .btn-back img {
   width: 24px;
   height: 24px;
-}
-
-.test-container {
-  padding: 40px;
-}
-.test-container .crts-test .crt-test {
-  width: 100%;
-  max-width: 309px;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  background: #f3f4f6;
-  overflow: hidden;
-  display: grid;
-  place-items: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-}
-.test-container .crts-test .crt-test img {
-  width: 70%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  margin-top: 50px;
 }/*# sourceMappingURL=style.css.map */
