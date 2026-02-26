@@ -4,7 +4,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 923px;
+    min-height: 923px;
     padding: 24px 50px 32px 50px;
     border-radius: 16px;
     position: relative;
@@ -58,7 +58,6 @@
         z-index: 2;
         position: relative;
 
-        // saxlayırıq (gələcək animasiyalar üçün faydalı olacaq)
         transition: opacity 0.35s ease, transform 0.35s ease;
 
         @include mq(tablet-portrait-up) {
@@ -71,6 +70,7 @@
             flex-direction: column;
             gap: 16px;
             z-index: 2;
+            width: 60%;
 
             .hero-description {
                 color: #FFF;

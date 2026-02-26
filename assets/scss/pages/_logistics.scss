@@ -85,6 +85,12 @@
                 border-radius: 16px;
                 overflow: hidden;
                 border: 1px solid #dedede;
+
+
+                @include mq(phone-only) {
+                    overflow: scroll !important;
+                    scrollbar-width: none;
+                }
             }
 
             .warning {

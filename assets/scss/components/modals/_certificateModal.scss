@@ -1,4 +1,6 @@
 .certificate-modal {
+  z-index: 99;
+  
   .modal-content {
     display: flex;
     flex-direction: column;

@@ -266,6 +266,7 @@ header .header-actions .btn-group .dropdown-toggle:hover span {
 }
 header .header-actions .btn-group .dropdown-menu {
   z-index: 9;
+  background-color: green;
 }
 @media only screen and (min-width: 1200px) {
   header .menu-button {
@@ -458,7 +459,7 @@ footer .footer-bottom .bottom-actions a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 923px;
+  min-height: 923px;
   padding: 24px 50px 32px 50px;
   border-radius: 16px;
   position: relative;
@@ -516,6 +517,7 @@ footer .footer-bottom .bottom-actions a {
   flex-direction: column;
   gap: 16px;
   z-index: 2;
+  width: 60%;
 }
 .page-head-image .hero .hero-intro .hero-description {
   color: #FFF;
@@ -1047,6 +1049,16 @@ footer .footer-bottom .bottom-actions a {
 .accordion .accordion-item .accordion-header .accordion-button::after {
   display: none !important;
 }
+@media only screen and (max-width: 480px) {
+  .accordion .accordion-item .accordion-header .accordion-button span {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .accordion .accordion-item .accordion-header .accordion-button span {
+    font-size: 10px;
+  }
+}
 .accordion .accordion-item .accordion-header .accordion-button .accordion-icon {
   display: inline-flex;
   margin-left: 8px;
@@ -1456,6 +1468,12 @@ footer .footer-bottom .bottom-actions a {
   border-bottom: 1px solid #D1D1D1;
   background: #F4F5F6;
 }
+@media only screen and (max-width: 480px) {
+  .transportation-options-table thead tr th {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
 .transportation-options-table tbody tr:nth-child(even) {
   border-bottom: 1px solid #D1D1D1;
   background: #F4F5F6;
@@ -1474,6 +1492,12 @@ footer .footer-bottom .bottom-actions a {
   font-weight: 500;
   line-height: 140%;
 }
+@media only screen and (max-width: 480px) {
+  .transportation-options-table tbody tr td {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
 .transportation-options-table tbody tr td .transportation-type {
   display: flex;
   align-items: center;
@@ -1485,6 +1509,15 @@ footer .footer-bottom .bottom-actions a {
   border: 1px solid #ECECEC;
   background: #F9F9F9;
 }
+@media only screen and (max-width: 480px) {
+  .transportation-options-table tbody tr td .transportation-type .icon {
+    padding: 6px;
+  }
+  .transportation-options-table tbody tr td .transportation-type .icon img {
+    width: 20px;
+    height: 20px;
+  }
+}
 .transportation-options-table tbody tr td .transportation-type span {
   overflow: hidden;
   color: #000;
@@ -1493,6 +1526,12 @@ footer .footer-bottom .bottom-actions a {
   font-style: normal;
   font-weight: 500;
   line-height: 140%;
+}
+@media only screen and (max-width: 480px) {
+  .transportation-options-table tbody tr td .transportation-type span {
+    font-size: 12px;
+    padding: 8px;
+  }
 }
 
 .send-request-modal .modal-content {
@@ -1571,6 +1610,9 @@ footer .footer-bottom .bottom-actions a {
   line-height: 140%;
 }
 
+.certificate-modal {
+  z-index: 99;
+}
 .certificate-modal .modal-content {
   display: flex;
   flex-direction: column;
@@ -2329,6 +2371,12 @@ body {
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid #dedede;
+}
+@media only screen and (max-width: 480px) {
+  .logistics-page-container .choose-option .section-body .table-div {
+    overflow: scroll !important;
+    scrollbar-width: none;
+  }
 }
 .logistics-page-container .choose-option .section-body .warning {
   color: rgba(0, 0, 0, 0.5);

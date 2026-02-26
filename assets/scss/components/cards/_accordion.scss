@@ -1,3 +1,5 @@
+@use '../../abstracts/mixins' as *;
+
 .accordion {
     display: flex;
     flex-direction: column;
@@ -31,6 +33,18 @@
 
                 &::after {
                     display: none !important;
+                }
+
+                span {
+                    @include mq(phone-only) {
+                        font-size: 12px;
+                    }
+
+                    @include mq(phone-sm) {
+                        font-size: 10px;
+                    }
+
+
                 }
 
                 .accordion-icon {
